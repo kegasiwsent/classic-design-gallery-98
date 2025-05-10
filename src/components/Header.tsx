@@ -1,16 +1,12 @@
-
 import { useState } from "react";
 import { Menu, X, Instagram, Youtube, Linkedin, Facebook, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
-  return (
-    <header className="w-full bg-transparent absolute top-0 z-50">
+  return <header className="w-full bg-transparent absolute top-0 z-50">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <img alt="JB Design Logo" src="/lovable-uploads/172a6183-431f-48c7-a892-6f5a6858717c.png" className="h-10 object-contain" />
+          <img alt="JB Design Logo" src="/lovable-uploads/172a6183-431f-48c7-a892-6f5a6858717c.png" className="h-16 object-contain" />
         </div>
 
         {/* Desktop Navigation */}
@@ -50,8 +46,7 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-interior-navy/90">
+      {isMenuOpen && <div className="md:hidden bg-interior-navy/90">
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
             <a href="#" className="text-sm text-white hover:text-primary transition-colors py-2 border-b border-white/20">Home</a>
             <a href="#services" className="text-sm text-white hover:text-primary transition-colors py-2 border-b border-white/20">Services</a>
@@ -61,10 +56,7 @@ const Header = () => {
             <a href="#contact" className="text-sm text-white hover:text-primary transition-colors py-2 border-b border-white/20">Contact Us</a>
             <a href="#extra" className="text-sm text-white hover:text-primary transition-colors py-2">Extra</a>
           </nav>
-        </div>
-      )}
-    </header>
-  );
+        </div>}
+    </header>;
 };
-
 export default Header;
