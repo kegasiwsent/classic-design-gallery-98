@@ -9,8 +9,11 @@ const Header = () => {
     <header className="w-full bg-background border-b border-interior-beige sticky top-0 z-50">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-full bg-primary"></div>
-          <span className="font-serif text-xl font-semibold">LIVSPACE</span>
+          <img 
+            src="/lovable-uploads/39541725-2f56-48f5-b0cf-e2d30682ad23.png" 
+            alt="JB Design Logo" 
+            className="h-10"
+          />
         </div>
 
         {/* Desktop Navigation */}
