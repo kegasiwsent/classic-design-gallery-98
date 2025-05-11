@@ -10,7 +10,11 @@ const Header = () => {
     <header className="w-full bg-transparent absolute top-0 z-50 backdrop-blur-sm">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center border-b border-white/10">
         <div className="flex items-center gap-2">
-          <img alt="JB Design Logo" src="/lovable-uploads/172a6183-431f-48c7-a892-6f5a6858717c.png" className="h-16 object-contain" />
+          <img 
+            alt="JB Design Logo" 
+            src="/lovable-uploads/172a6183-431f-48c7-a892-6f5a6858717c.png" 
+            className="h-16 object-contain hover:scale-105 transition-all duration-300 animate-fade-in"
+          />
         </div>
 
         {/* Desktop Navigation */}
@@ -26,19 +30,19 @@ const Header = () => {
 
         {/* Social Media Icons */}
         <div className="hidden md:flex items-center gap-4">
-          <a href="#" className="text-interior-beige hover:text-interior-gold transition-colors">
+          <a href="#" className="text-interior-beige hover:text-interior-gold transition-colors hover:scale-110 transition-transform">
             <Instagram size={20} />
           </a>
-          <a href="#" className="text-interior-beige hover:text-interior-gold transition-colors">
+          <a href="#" className="text-interior-beige hover:text-interior-gold transition-colors hover:scale-110 transition-transform">
             <Youtube size={20} />
           </a>
-          <a href="#" className="text-interior-beige hover:text-interior-gold transition-colors">
+          <a href="#" className="text-interior-beige hover:text-interior-gold transition-colors hover:scale-110 transition-transform">
             <Linkedin size={20} />
           </a>
-          <a href="#" className="text-interior-beige hover:text-interior-gold transition-colors">
+          <a href="#" className="text-interior-beige hover:text-interior-gold transition-colors hover:scale-110 transition-transform">
             <Facebook size={20} />
           </a>
-          <a href="#" className="text-interior-beige hover:text-interior-gold transition-colors">
+          <a href="#" className="text-interior-beige hover:text-interior-gold transition-colors hover:scale-110 transition-transform">
             <Twitter size={20} />
           </a>
         </div>
