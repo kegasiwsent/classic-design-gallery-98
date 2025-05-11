@@ -1,5 +1,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useState } from "react";
 
 interface ServiceCategoryProps {
   title: string;
@@ -27,28 +29,82 @@ const ServiceCategory = ({ title, description, image }: ServiceCategoryProps) =>
 };
 
 const ServiceCategories = () => {
+  const [activeTab, setActiveTab] = useState("all");
+  
+  const serviceTypes = [
+    { id: "all", label: "All Services" },
+    { id: "interior-design", label: "Interior Design" },
+    { id: "design-consultation", label: "Design Consultation" },
+    { id: "project-management", label: "Project Management" },
+    { id: "vastu-shastra", label: "Vastu Shastra Consultation" }
+  ];
+  
   const services = [
     {
       title: "Modular Interiors",
       description: "Functional kitchen, wardrobe and storage solutions",
-      image: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=600&q=80",
+      type: "interior-design"
     },
     {
       title: "Full Home Interiors",
       description: "Turnkey interior solutions for your home",
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80",
+      type: "interior-design"
     },
     {
       title: "Luxury Interiors",
       description: "Tailored interiors that redefine elegance",
-      image: "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=600&q=80",
+      type: "interior-design"
     },
     {
       title: "Renovations",
       description: "Expert solutions to upgrade your home",
-      image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80",
+      type: "interior-design"
     },
+    {
+      title: "One-on-One Consultation",
+      description: "Personalized design advice from our experts",
+      image: "https://images.unsplash.com/photo-1577791465485-b80039b4d69a?auto=format&fit=crop&w=600&q=80",
+      type: "design-consultation"
+    },
+    {
+      title: "Material Selection",
+      description: "Guidance on choosing the perfect materials for your space",
+      image: "https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=600&q=80",
+      type: "design-consultation"
+    },
+    {
+      title: "Timeline Planning",
+      description: "Comprehensive project scheduling and monitoring",
+      image: "https://images.unsplash.com/photo-1550305080-4e029753abcf?auto=format&fit=crop&w=600&q=80",
+      type: "project-management"
+    },
+    {
+      title: "Contractor Management",
+      description: "Coordination between all parties involved in your project",
+      image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80",
+      type: "project-management"
+    },
+    {
+      title: "Home Vastu Analysis",
+      description: "Comprehensive evaluation of your home's energy flow",
+      image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=600&q=80",
+      type: "vastu-shastra"
+    },
+    {
+      title: "Vastu Correction Planning",
+      description: "Solutions to align your space with vastu principles",
+      image: "https://images.unsplash.com/photo-1560185127-6ed189bf02f4?auto=format&fit=crop&w=600&q=80",
+      type: "vastu-shastra"
+    }
   ];
+
+  const filteredServices = activeTab === "all" 
+    ? services 
+    : services.filter(service => service.type === activeTab);
 
   return (
     <section className="py-24 bg-gradient-to-b from-white to-interior-beige/30" id="services">
@@ -64,8 +120,29 @@ const ServiceCategories = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
+        <div className="flex justify-center mb-10">
+          <Tabs 
+            defaultValue="all" 
+            value={activeTab} 
+            onValueChange={setActiveTab}
+            className="w-full max-w-3xl"
+          >
+            <TabsList className="grid grid-cols-2 md:grid-cols-5 bg-interior-beige/20 p-1 rounded-md">
+              {serviceTypes.map((type) => (
+                <TabsTrigger 
+                  key={type.id} 
+                  value={type.id}
+                  className="data-[state=active]:bg-interior-gold data-[state=active]:text-interior-charcoal"
+                >
+                  {type.label}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          </Tabs>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {filteredServices.map((service, index) => (
             <ServiceCategory
               key={index}
               title={service.title}
