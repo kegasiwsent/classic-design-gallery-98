@@ -53,7 +53,7 @@ const ConsultationForm = () => {
                 <Phone className="mr-4 text-primary h-5 w-5" />
                 <div>
                   <h4 className="font-medium mb-1">Call us</h4>
-                  <p className="text-muted-foreground text-sm">+1 (555) 123-4567</p>
+                  <a href="tel:+919377766717" className="text-muted-foreground text-sm hover:text-primary transition-colors">+91 9377766717</a>
                 </div>
               </div>
               
