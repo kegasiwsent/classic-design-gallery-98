@@ -36,7 +36,7 @@ const ServiceCategories = () => {
     { id: "interior-design", label: "Interior Design" },
     { id: "design-consultation", label: "Design Consultation" },
     { id: "project-management", label: "Project Management" },
-    { id: "vastu-shastra", label: "Vastu Shastra Consultation" }
+    { id: "vastu-shastra", label: "Vastu Shastra" }
   ];
   
   const services = [
@@ -125,14 +125,14 @@ const ServiceCategories = () => {
             defaultValue="all" 
             value={activeTab} 
             onValueChange={setActiveTab}
-            className="w-full max-w-3xl"
+            className="w-full max-w-4xl"
           >
-            <TabsList className="grid grid-cols-2 md:grid-cols-5 bg-interior-beige/20 p-1 rounded-md">
+            <TabsList className="flex flex-wrap justify-center bg-interior-beige/20 p-2 rounded-md gap-2">
               {serviceTypes.map((type) => (
                 <TabsTrigger 
                   key={type.id} 
                   value={type.id}
-                  className="data-[state=active]:bg-interior-gold data-[state=active]:text-interior-charcoal"
+                  className="px-4 py-2 rounded data-[state=active]:bg-interior-gold data-[state=active]:text-interior-charcoal"
                 >
                   {type.label}
                 </TabsTrigger>
