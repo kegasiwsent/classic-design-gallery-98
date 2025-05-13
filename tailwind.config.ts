@@ -75,6 +75,19 @@ export default {
                     'navy': '#1F3044',
                     'gold': '#D4AF37',
                     'charcoal': '#36454F',
+                },
+                blue: {
+                    'light': '#33C3F0',
+                    'medium': '#1EAEDB',
+                    'dark': '#0A6E9E',
+                    'navy': '#1F3044',
+                },
+                gray: {
+                    'lightest': '#F6F6F7',
+                    'light': '#C8C8C9',
+                    'medium': '#8A898C',
+                    'dark': '#403E43',
+                    'charcoal': '#222222',
                 }
 			},
 			borderRadius: {
@@ -108,13 +121,44 @@ export default {
                         opacity: '1',
                         transform: 'translateY(0)'
                     }
+                },
+                'slide-up': {
+                    '0%': {
+                        opacity: '0',
+                        transform: 'translateY(20px)'
+                    },
+                    '100%': {
+                        opacity: '1',
+                        transform: 'translateY(0)'
+                    }
+                },
+                'slide-in-right': {
+                    '0%': {
+                        opacity: '0',
+                        transform: 'translateX(20px)'
+                    },
+                    '100%': {
+                        opacity: '1',
+                        transform: 'translateX(0)'
+                    }
                 }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-                'fade-in': 'fade-in 0.5s ease-out'
-			}
+                'fade-in': 'fade-in 0.5s ease-out',
+                'slide-up': 'slide-up 0.7s ease-out',
+                'slide-in-right': 'slide-in-right 0.5s ease-out'
+			},
+            boxShadow: {
+                'soft': '0 4px 12px rgba(0, 0, 0, 0.05)',
+                'card': '0 10px 30px rgba(0, 0, 0, 0.08)',
+                'button': '0 4px 6px rgba(30, 174, 219, 0.25)',
+            },
+            backgroundImage: {
+                'blue-gradient': 'linear-gradient(to right, #1EAEDB, #33C3F0)',
+                'dark-gradient': 'linear-gradient(to right, #222222, #403E43)',
+            }
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
