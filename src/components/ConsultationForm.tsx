@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Whatsapp, Phone } from "lucide-react";
+import { MessageSquare, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const ConsultationForm = () => {
@@ -113,7 +113,7 @@ const ConsultationForm = () => {
           className="bg-[#25D366] hover:bg-[#20BD5C] text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110"
           aria-label="Chat on WhatsApp"
         >
-          <Whatsapp size={28} />
+          <MessageSquare size={28} />
         </a>
         
         <a 
