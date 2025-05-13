@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Calendar, Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import { Whatsapp, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const ConsultationForm = () => {
@@ -30,7 +30,7 @@ const ConsultationForm = () => {
   };
 
   return (
-    <section className="py-16 bg-interior-cream" id="contact">
+    <section className="py-16 bg-interior-cream relative" id="contact">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
@@ -39,41 +39,6 @@ const ConsultationForm = () => {
               Let's transform your space into something beautiful. Our team of expert designers 
               will help you create the perfect interior for your needs and preferences.
             </p>
-            
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <MapPin className="mr-4 text-primary h-5 w-5" />
-                <div>
-                  <h4 className="font-medium mb-1">Visit our studio</h4>
-                  <p className="text-muted-foreground text-sm">123 Design Street, Creative City, 10001</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <Phone className="mr-4 text-primary h-5 w-5" />
-                <div>
-                  <h4 className="font-medium mb-1">Call us</h4>
-                  <a href="tel:+919377766717" className="text-muted-foreground text-sm hover:text-primary transition-colors">+91 9377766717</a>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <Mail className="mr-4 text-primary h-5 w-5" />
-                <div>
-                  <h4 className="font-medium mb-1">Email us</h4>
-                  <p className="text-muted-foreground text-sm">hello@livspace.com</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <Calendar className="mr-4 text-primary h-5 w-5" />
-                <div>
-                  <h4 className="font-medium mb-1">Working hours</h4>
-                  <p className="text-muted-foreground text-sm">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  <p className="text-muted-foreground text-sm">Saturday: 10:00 AM - 4:00 PM</p>
-                </div>
-              </div>
-            </div>
           </div>
           
           <div className="bg-white p-8 rounded-lg shadow-sm border border-interior-beige">
@@ -137,6 +102,27 @@ const ConsultationForm = () => {
             </form>
           </div>
         </div>
+      </div>
+
+      {/* Floating contact buttons */}
+      <div className="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+        <a 
+          href="https://wa.me/919377766717" 
+          target="_blank"
+          rel="noopener noreferrer" 
+          className="bg-[#25D366] hover:bg-[#20BD5C] text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110"
+          aria-label="Chat on WhatsApp"
+        >
+          <Whatsapp size={28} />
+        </a>
+        
+        <a 
+          href="tel:+919377766717" 
+          className="bg-white hover:bg-gray-100 text-[#5F2877] p-4 rounded-full shadow-lg transition-transform hover:scale-110"
+          aria-label="Call us"
+        >
+          <Phone size={28} />
+        </a>
       </div>
     </section>
   );
