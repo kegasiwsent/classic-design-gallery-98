@@ -1,10 +1,11 @@
 
-import { Button } from "@/components/ui/button";
+import { Button } from "./ui/button";
 import HeroSlideshow from "./HeroSlideshow";
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full h-[90vh] overflow-hidden">
+    <section className="h-screen w-full relative overflow-hidden">
+      {/* Background slideshow */}
       <HeroSlideshow />
 
       <div className="absolute inset-0 flex flex-col justify-center items-start text-white p-8 md:p-16 lg:p-24">
@@ -23,7 +24,7 @@ const HeroSection = () => {
           </Button>
           <Button 
             variant="outline"
-            className="border-gray-light text-gray-lightest hover:bg-gray-dark/20 rounded-md px-8 py-6 text-base hover:scale-105 transition-transform"
+            className="border-blue-medium text-white bg-gray-dark/50 hover:bg-blue-navy/50 rounded-md px-8 py-6 text-base hover:scale-105 transition-transform"
           >
             Our Services
           </Button>
