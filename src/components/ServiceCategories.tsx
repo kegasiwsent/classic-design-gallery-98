@@ -11,7 +11,7 @@ interface ServiceCategoryProps {
 
 const ServiceCategory = ({ title, description, image }: ServiceCategoryProps) => {
   return (
-    <Card className="overflow-hidden border-none rounded-none shadow-lg hover:shadow-xl transition-all group">
+    <Card className="overflow-hidden border-none rounded-lg shadow-lg hover:shadow-xl transition-all group">
       <div className="aspect-[4/3] relative">
         <img 
           src={image} 
@@ -20,9 +20,9 @@ const ServiceCategory = ({ title, description, image }: ServiceCategoryProps) =>
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
-      <CardContent className="p-6 bg-gradient-to-br from-interior-cream to-white border-l-2 border-interior-gold">
-        <h3 className="font-serif text-xl font-semibold mb-2 text-interior-charcoal">{title}</h3>
-        <p className="text-muted-foreground text-sm">{description}</p>
+      <CardContent className="p-6 bg-gradient-to-br from-gray-lightest to-white border-l-2 border-blue-medium">
+        <h3 className="font-serif text-xl font-semibold mb-2 text-blue-navy">{title}</h3>
+        <p className="text-gray-medium text-sm">{description}</p>
       </CardContent>
     </Card>
   );
@@ -107,14 +107,14 @@ const ServiceCategories = () => {
     : services.filter(service => service.type === activeTab);
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-interior-beige/30" id="services">
+    <section className="py-24 bg-gradient-to-b from-white to-gray-lightest" id="services">
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-interior-charcoal">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-blue-navy">
             One-stop shop for all things interiors
           </h2>
-          <div className="w-20 h-1 bg-interior-gold mx-auto mb-6"></div>
-          <p className="text-muted-foreground max-w-3xl mx-auto">
+          <div className="w-20 h-1 bg-blue-medium mx-auto mb-6"></div>
+          <p className="text-gray-medium max-w-3xl mx-auto">
             Be it end-to-end interiors, renovation or modular solutions, we have it all for your home or office. 
             With a wide range of furniture & decor, we have your back from start to finish.
           </p>
@@ -127,12 +127,12 @@ const ServiceCategories = () => {
             onValueChange={setActiveTab}
             className="w-full max-w-4xl"
           >
-            <TabsList className="flex flex-wrap justify-center bg-interior-beige/20 p-2 rounded-md gap-2">
+            <TabsList className="flex flex-wrap justify-center bg-gray-lightest p-2 rounded-md gap-2">
               {serviceTypes.map((type) => (
                 <TabsTrigger 
                   key={type.id} 
                   value={type.id}
-                  className="px-4 py-2 rounded data-[state=active]:bg-interior-gold data-[state=active]:text-interior-charcoal"
+                  className="px-4 py-2 rounded data-[state=active]:bg-blue-medium data-[state=active]:text-white"
                 >
                   {type.label}
                 </TabsTrigger>
