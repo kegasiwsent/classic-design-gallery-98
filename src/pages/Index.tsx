@@ -5,6 +5,7 @@ import ServiceCategories from "@/components/ServiceCategories";
 import PortfolioGallery from "@/components/PortfolioGallery";
 import ConsultationForm from "@/components/ConsultationForm";
 import Footer from "@/components/Footer";
+import QuotePopup from "@/components/QuotePopup";
 
 const Index = () => {
   return (
@@ -17,6 +18,7 @@ const Index = () => {
         <ConsultationForm />
       </main>
       <Footer />
+      <QuotePopup />
     </div>
   );
 };
