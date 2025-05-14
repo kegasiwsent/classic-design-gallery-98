@@ -122,13 +122,8 @@ const QuotePopup = () => {
             </DialogClose>
             <Button 
               type="submit" 
-              className="bg-blue-medium hover:bg-blue-dark text-white flex items-center gap-2"
+              className="bg-blue-medium hover:bg-blue-dark text-white"
             >
-              <img 
-                src="/lovable-uploads/71fc2b60-e07c-42dc-9f9e-01e7409f0600.png" 
-                alt="WhatsApp" 
-                className="w-5 h-5" 
-              />
               Get Free Quote
             </Button>
           </div>
