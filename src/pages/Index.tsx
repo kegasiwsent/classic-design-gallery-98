@@ -2,7 +2,7 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ServiceCategories from "@/components/ServiceCategories";
-import PortfolioGallery from "@/components/PortfolioGallery";
+import Projects from "@/components/Projects";
 import ConsultationForm from "@/components/ConsultationForm";
 import Footer from "@/components/Footer";
 import QuotePopup from "@/components/QuotePopup";
@@ -14,7 +14,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <ServiceCategories />
-        <PortfolioGallery />
+        <Projects />
         <ConsultationForm />
       </main>
       <Footer />

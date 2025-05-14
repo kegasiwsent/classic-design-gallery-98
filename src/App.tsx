@@ -1,8 +1,8 @@
 
-import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Index from "@/pages/Index";
 import NotFound from "@/pages/NotFound";
+import ProjectDetail from "@/components/ProjectDetail";
 import { Toaster } from "@/components/ui/toaster";
 
 const App = () => {
@@ -11,6 +11,7 @@ const App = () => {
       <div className="min-h-screen flex flex-col bg-background relative">
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/project/:projectId" element={<ProjectDetail />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Toaster />
