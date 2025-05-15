@@ -4,13 +4,16 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, Di
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { X } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 const QuotePopup = () => {
   const [open, setOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     mobile: "",
-    email: ""
+    country: "India",
+    state: "",
+    city: ""
   });
   const [hasSeenPopup, setHasSeenPopup] = useState(false);
   
@@ -37,11 +40,15 @@ const QuotePopup = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
+  const handleSelectChange = (value: string, name: string) => {
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
     // Format the message for WhatsApp
-    const message = `Hello, I'm interested in a free quote!\n\nName: ${formData.name}\nMobile: ${formData.mobile}\nEmail: ${formData.email}`;
+    const message = `Hello, I'm interested in a free quote!\n\nName: ${formData.name}\nMobile: ${formData.mobile}\nLocation: ${formData.city}, ${formData.state}, ${formData.country}`;
     
     // Create WhatsApp URL with the message
     const whatsappNumber = "919377766717"; // Your WhatsApp number
@@ -53,6 +60,46 @@ const QuotePopup = () => {
     // Close the dialog
     setOpen(false);
   };
+
+  // List of Indian states
+  const indianStates = [
+    "Andhra Pradesh",
+    "Arunachal Pradesh", 
+    "Assam",
+    "Andaman and Nicobar Islands", 
+    "Bihar", 
+    "Chhattisgarh",
+    "Chandigarh", 
+    "Dadra and Nagar Haveli and Daman and Diu", 
+    "Delhi",
+    "Goa", 
+    "Gujarat", 
+    "Haryana", 
+    "Himachal Pradesh",
+    "Jammu and Kashmir",
+    "Jharkhand",
+    "Karnataka",
+    "Kerala",
+    "Ladakh",
+    "Lakshadweep",
+    "Madhya Pradesh",
+    "Maharashtra",
+    "Manipur",
+    "Meghalaya",
+    "Mizoram",
+    "Nagaland",
+    "Odisha",
+    "Puducherry",
+    "Punjab",
+    "Rajasthan",
+    "Sikkim",
+    "Tamil Nadu",
+    "Telangana",
+    "Tripura",
+    "Uttar Pradesh",
+    "Uttarakhand",
+    "West Bengal"
+  ];
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
@@ -94,18 +141,58 @@ const QuotePopup = () => {
                 onChange={handleChange}
               />
             </div>
+
             <div className="grid gap-2">
-              <label htmlFor="email" className="text-sm font-medium">
-                Email Address
+              <label htmlFor="country" className="text-sm font-medium">
+                Country
+              </label>
+              <Select 
+                value={formData.country} 
+                onValueChange={(value) => handleSelectChange(value, "country")}
+                disabled
+              >
+                <SelectTrigger id="country" className="border-blue-light focus:ring-blue-medium">
+                  <SelectValue placeholder="Select country" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="India">India</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            
+            <div className="grid gap-2">
+              <label htmlFor="state" className="text-sm font-medium">
+                State
+              </label>
+              <Select 
+                value={formData.state} 
+                onValueChange={(value) => handleSelectChange(value, "state")}
+                required
+              >
+                <SelectTrigger id="state" className="border-blue-light focus:ring-blue-medium">
+                  <SelectValue placeholder="Select state" />
+                </SelectTrigger>
+                <SelectContent>
+                  {indianStates.map((state) => (
+                    <SelectItem key={state} value={state}>
+                      {state}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            
+            <div className="grid gap-2">
+              <label htmlFor="city" className="text-sm font-medium">
+                City
               </label>
               <Input
-                id="email"
-                name="email"
-                type="email"
-                placeholder="Your email address"
+                id="city"
+                name="city"
+                placeholder="Your city"
                 required
                 className="border-blue-light focus:ring-blue-medium"
-                value={formData.email}
+                value={formData.city}
                 onChange={handleChange}
               />
             </div>
