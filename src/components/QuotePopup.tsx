@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { X } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 const QuotePopup = () => {
   const [open, setOpen] = useState(false);
@@ -13,7 +14,10 @@ const QuotePopup = () => {
     mobile: "",
     country: "India",
     state: "",
-    city: ""
+    city: "",
+    projectType: "",
+    residenceType: "",
+    squareFeet: ""
   });
   const [hasSeenPopup, setHasSeenPopup] = useState(false);
   const [citiesForState, setCitiesForState] = useState<string[]>([]);
@@ -53,13 +57,27 @@ const QuotePopup = () => {
 
   const handleSelectChange = (value: string, name: string) => {
     setFormData(prev => ({ ...prev, [name]: value }));
+    
+    // Reset dependent fields when project type changes
+    if (name === "projectType") {
+      setFormData(prev => ({ ...prev, residenceType: "", squareFeet: "" }));
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
     // Format the message for WhatsApp
-    const message = `Hello, I'm interested in a free quote!\n\nName: ${formData.name}\nMobile: ${formData.mobile}\nLocation: ${formData.city}, ${formData.state}, ${formData.country}`;
+    let message = `Hello, I'm interested in a free quote!\n\nName: ${formData.name}\nMobile: ${formData.mobile}\nLocation: ${formData.city}, ${formData.state}, ${formData.country}`;
+    
+    // Add project details
+    message += `\n\nProject Type: ${formData.projectType}`;
+    
+    if (formData.projectType === "Residence") {
+      message += `\nResidence Type: ${formData.residenceType}`;
+    } else if (["Commercial", "Showroom", "Renovation"].includes(formData.projectType) && formData.squareFeet) {
+      message += `\nTotal Square Feet: ${formData.squareFeet}`;
+    }
     
     // Create WhatsApp URL with the message
     const whatsappNumber = "919377766717"; // Your WhatsApp number
@@ -272,6 +290,79 @@ const QuotePopup = () => {
                 </SelectContent>
               </Select>
             </div>
+
+            {/* Project Type Selection */}
+            <div className="grid gap-2">
+              <label htmlFor="projectType" className="text-sm font-medium">
+                Project Type
+              </label>
+              <Select 
+                value={formData.projectType} 
+                onValueChange={(value) => handleSelectChange(value, "projectType")}
+                required
+              >
+                <SelectTrigger id="projectType" className="border-blue-light focus:ring-blue-medium">
+                  <SelectValue placeholder="Select project type" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="Residence">Residence</SelectItem>
+                  <SelectItem value="Commercial">Commercial</SelectItem>
+                  <SelectItem value="Showroom">Showroom</SelectItem>
+                  <SelectItem value="Renovation">Renovation</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            {/* Conditional Fields Based on Project Type */}
+            {formData.projectType === "Residence" && (
+              <div className="grid gap-2">
+                <label htmlFor="residenceType" className="text-sm font-medium">
+                  Residence Type
+                </label>
+                <RadioGroup 
+                  value={formData.residenceType} 
+                  onValueChange={(value) => handleSelectChange(value, "residenceType")}
+                  className="flex flex-wrap gap-4"
+                  required
+                >
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="5BHK" id="5bhk" />
+                    <label htmlFor="5bhk">5BHK</label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="4BHK" id="4bhk" />
+                    <label htmlFor="4bhk">4BHK</label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="3BHK" id="3bhk" />
+                    <label htmlFor="3bhk">3BHK</label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="2BHK" id="2bhk" />
+                    <label htmlFor="2bhk">2BHK</label>
+                  </div>
+                </RadioGroup>
+              </div>
+            )}
+
+            {/* Square Feet Input for Commercial, Showroom, and Renovation */}
+            {["Commercial", "Showroom", "Renovation"].includes(formData.projectType) && (
+              <div className="grid gap-2">
+                <label htmlFor="squareFeet" className="text-sm font-medium">
+                  Total Square Feet
+                </label>
+                <Input
+                  id="squareFeet"
+                  name="squareFeet"
+                  placeholder="Enter total square feet"
+                  required
+                  type="number"
+                  className="border-blue-light focus:ring-blue-medium"
+                  value={formData.squareFeet}
+                  onChange={handleChange}
+                />
+              </div>
+            )}
           </div>
           <div className="flex justify-end gap-2 pt-4">
             <DialogClose asChild>
