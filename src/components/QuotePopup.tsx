@@ -16,6 +16,7 @@ const QuotePopup = () => {
     city: ""
   });
   const [hasSeenPopup, setHasSeenPopup] = useState(false);
+  const [citiesForState, setCitiesForState] = useState<string[]>([]);
   
   useEffect(() => {
     // Check if user has already seen the popup in this session
@@ -34,6 +35,16 @@ const QuotePopup = () => {
       setHasSeenPopup(true);
     }
   }, []);
+
+  useEffect(() => {
+    // Update cities when state changes
+    if (formData.state) {
+      const cities = citiesByState[formData.state] || [];
+      setCitiesForState(cities);
+      // Reset city when state changes
+      setFormData(prev => ({ ...prev, city: "" }));
+    }
+  }, [formData.state]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -100,6 +111,63 @@ const QuotePopup = () => {
     "Uttarakhand",
     "West Bengal"
   ];
+
+  // Cities by state
+  const citiesByState: {[key: string]: string[]} = {
+    "Gujarat": [
+      "Ahmedabad", "Adalaj", "Amreli", "Anand", "Anjar", "Ankleshwar", "Aravalli",
+      "Bardoli", "Bharuch", "Bhavnagar", "Bhuj", "Bilimora", "Botad",
+      "Chhota Udaipur", "Dahod", "Daman", "Dangs", "Deesa", "Dholka", "Dhoraji", "Dwarka",
+      "Gandhidham", "Gandhinagar", "Godhra", "Gondal", "Halol", "Himatnagar",
+      "Jamnagar", "Jetpur", "Junagadh", "Kalol", "Keshod", "Khambhat", "Kheda", "Khedbrahma",
+      "Limbdi", "Mahesana", "Mahuva", "Mandvi", "Modasa", "Morbi",
+      "Nadiad", "Navsari", "Palanpur", "Palitana", "Patan", "Porbandar",
+      "Rajkot", "Savarkundla", "Surendranagar", "Surat",
+      "Umreth", "Vadodara", "Valsad", "Vapi", "Veraval", "Visnagar"
+    ],
+    "Maharashtra": [
+      "Ahmednagar", "Akola", "Amravati", "Aurangabad", "Beed", "Bhiwandi", "Buldhana",
+      "Chandrapur", "Chiplun", "Dhule", "Dombivli", "Gadchiroli", "Gondia",
+      "Jalgaon", "Jalna", "Junnar", "Kolhapur", "Kalyan", "Karad", "Karimnagar", "Khopoli",
+      "Latur", "Mumbai", "Mira-Bhayandar", "Malegaon", "Matheran", "Malkapur",
+      "Nagpur", "Nanded", "Nashik", "Navi Mumbai", "Panvel", "Parbhani", "Pimpri-Chinchwad", "Pune",
+      "Ratnagiri", "Sangli", "Satara", "Solapur", "Shahapur", "Thane",
+      "Tuljapur", "Ulhasnagar", "Vasai-Virar", "Wardha", "Washim", "Yavatmal"
+    ],
+    "Andaman and Nicobar Islands": ["Port Blair"],
+    "Andhra Pradesh": ["Visakhapatnam", "Vijayawada", "Guntur", "Nellore", "Kurnool"],
+    "Arunachal Pradesh": ["Itanagar", "Naharlagun", "Pasighat", "Tawang", "Ziro"],
+    "Assam": ["Guwahati", "Dibrugarh", "Silchar", "Jorhat", "Tezpur"],
+    "Bihar": ["Patna", "Gaya", "Bhagalpur", "Muzaffarpur", "Darbhanga"],
+    "Chandigarh": ["Chandigarh"],
+    "Chhattisgarh": ["Raipur", "Bilaspur", "Durg", "Bhilai", "Korba"],
+    "Dadra and Nagar Haveli and Daman and Diu": ["Daman", "Diu", "Silvassa"],
+    "Delhi": ["New Delhi", "Delhi"],
+    "Goa": ["Panaji", "Margao", "Vasco da Gama", "Mapusa", "Ponda"],
+    "Haryana": ["Gurgaon", "Faridabad", "Panipat", "Ambala", "Rohtak"],
+    "Himachal Pradesh": ["Shimla", "Manali", "Dharamshala", "Solan", "Mandi"],
+    "Jammu and Kashmir": ["Srinagar", "Jammu", "Anantnag", "Baramulla", "Udhampur"],
+    "Jharkhand": ["Ranchi", "Jamshedpur", "Dhanbad", "Bokaro", "Hazaribagh"],
+    "Karnataka": ["Bengaluru", "Mysuru", "Mangaluru", "Hubballi", "Belagavi"],
+    "Kerala": ["Thiruvananthapuram", "Kochi", "Kozhikode", "Kollam", "Thrissur"],
+    "Ladakh": ["Leh", "Kargil"],
+    "Lakshadweep": ["Kavaratti", "Agatti", "Minicoy"],
+    "Madhya Pradesh": ["Bhopal", "Indore", "Gwalior", "Jabalpur", "Ujjain"],
+    "Meghalaya": ["Shillong", "Tura", "Nongstoin", "Jowai", "Baghmara"],
+    "Mizoram": ["Aizawl", "Lunglei", "Champhai", "Serchhip", "Kolasib"],
+    "Nagaland": ["Kohima", "Dimapur", "Mokokchung", "Tuensang", "Wokha"],
+    "Odisha": ["Bhubaneswar", "Cuttack", "Rourkela", "Sambalpur", "Puri"],
+    "Puducherry": ["Puducherry", "Karaikal", "Mahe", "Yanam"],
+    "Punjab": ["Amritsar", "Ludhiana", "Jalandhar", "Patiala", "Bathinda"],
+    "Rajasthan": ["Jaipur", "Jodhpur", "Udaipur", "Kota", "Bikaner"],
+    "Sikkim": ["Gangtok", "Namchi", "Gyalshing", "Mangan", "Rangpo"],
+    "Tamil Nadu": ["Chennai", "Coimbatore", "Madurai", "Tiruchirappalli", "Salem"],
+    "Telangana": ["Hyderabad", "Warangal", "Nizamabad"],
+    "Tripura": ["Agartala", "Kailasahar", "Belonia"],
+    "Uttar Pradesh": ["Lucknow", "Kanpur", "Varanasi", "Agra", "Prayagraj"],
+    "Uttarakhand": ["Dehradun", "Haridwar", "Roorkee", "Rishikesh", "Haldwani"],
+    "West Bengal": ["Kolkata", "Howrah", "Durgapur", "Asansol", "Siliguri"]
+  };
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
@@ -186,15 +254,23 @@ const QuotePopup = () => {
               <label htmlFor="city" className="text-sm font-medium">
                 City
               </label>
-              <Input
-                id="city"
-                name="city"
-                placeholder="Your city"
+              <Select 
+                value={formData.city} 
+                onValueChange={(value) => handleSelectChange(value, "city")}
                 required
-                className="border-blue-light focus:ring-blue-medium"
-                value={formData.city}
-                onChange={handleChange}
-              />
+                disabled={!formData.state}
+              >
+                <SelectTrigger id="city" className="border-blue-light focus:ring-blue-medium">
+                  <SelectValue placeholder={formData.state ? "Select city" : "Please select a state first"} />
+                </SelectTrigger>
+                <SelectContent>
+                  {citiesForState.map((city) => (
+                    <SelectItem key={city} value={city}>
+                      {city}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
           </div>
           <div className="flex justify-end gap-2 pt-4">
