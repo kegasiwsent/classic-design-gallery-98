@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 interface OngoingProject {
   id: string;
@@ -13,6 +14,7 @@ interface OngoingProject {
   progress: number;
   startDate: string;
   estimatedCompletion: string;
+  image: string;
 }
 
 const ongoingProjectsData: OngoingProject[] = [
@@ -24,6 +26,7 @@ const ongoingProjectsData: OngoingProject[] = [
     progress: 75,
     startDate: "Jan 10, 2025",
     estimatedCompletion: "Jun 20, 2025",
+    image: "https://images.unsplash.com/photo-1615729947596-a598e5de0ab3?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "riverside-office",
@@ -33,6 +36,7 @@ const ongoingProjectsData: OngoingProject[] = [
     progress: 45,
     startDate: "Feb 15, 2025",
     estimatedCompletion: "Aug 30, 2025",
+    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "heritage-home",
@@ -42,6 +46,7 @@ const ongoingProjectsData: OngoingProject[] = [
     progress: 30,
     startDate: "Mar 05, 2025",
     estimatedCompletion: "Jul 25, 2025",
+    image: "https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=600&q=80",
   },
   {
     id: "retail-showroom",
@@ -51,6 +56,7 @@ const ongoingProjectsData: OngoingProject[] = [
     progress: 60,
     startDate: "Dec 20, 2024",
     estimatedCompletion: "May 15, 2025",
+    image: "https://images.unsplash.com/photo-1460574283810-2aab119d8511?auto=format&fit=crop&w=600&q=80",
   },
 ];
 
@@ -61,6 +67,7 @@ const OngoingProjects = () => {
         <Table>
           <TableHeader>
             <TableRow>
+              <TableHead>Project Image</TableHead>
               <TableHead>Project Name</TableHead>
               <TableHead>Location</TableHead>
               <TableHead>Type</TableHead>
@@ -71,6 +78,15 @@ const OngoingProjects = () => {
           <TableBody>
             {ongoingProjectsData.map((project) => (
               <TableRow key={project.id}>
+                <TableCell className="w-24">
+                  <AspectRatio ratio={1/1} className="h-16 w-16 rounded-md overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.name}
+                      className="object-cover h-full w-full"
+                    />
+                  </AspectRatio>
+                </TableCell>
                 <TableCell className="font-medium">{project.name}</TableCell>
                 <TableCell>{project.location}</TableCell>
                 <TableCell>{project.type}</TableCell>
@@ -116,24 +132,33 @@ const OngoingProjects = () => {
       <div className="grid grid-cols-1 gap-4 md:hidden">
         {ongoingProjectsData.map((project) => (
           <Card key={project.id}>
-            <CardContent className="p-4 space-y-3">
-              <div>
-                <h3 className="font-medium">{project.name}</h3>
-                <p className="text-sm text-gray-500">{project.location}</p>
-              </div>
-              
-              <div className="flex justify-between items-center">
-                <Badge variant="outline" className="bg-interior-gold/10 text-interior-gold border-interior-gold/20">
-                  {project.type}
-                </Badge>
-                <span className="text-xs font-medium">{project.progress}% Complete</span>
-              </div>
-              
-              <Progress value={project.progress} className="h-2" />
-              
-              <div className="flex justify-between text-xs text-gray-500">
-                <div>Started: {project.startDate}</div>
-                <div>Est. Completion: {project.estimatedCompletion}</div>
+            <CardContent className="p-0">
+              <AspectRatio ratio={3/2}>
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="object-cover w-full h-full"
+                />
+              </AspectRatio>
+              <div className="p-4 space-y-3">
+                <div>
+                  <h3 className="font-medium">{project.name}</h3>
+                  <p className="text-sm text-gray-500">{project.location}</p>
+                </div>
+                
+                <div className="flex justify-between items-center">
+                  <Badge variant="outline" className="bg-interior-gold/10 text-interior-gold border-interior-gold/20">
+                    {project.type}
+                  </Badge>
+                  <span className="text-xs font-medium">{project.progress}% Complete</span>
+                </div>
+                
+                <Progress value={project.progress} className="h-2" />
+                
+                <div className="flex justify-between text-xs text-gray-500">
+                  <div>Started: {project.startDate}</div>
+                  <div>Est. Completion: {project.estimatedCompletion}</div>
+                </div>
               </div>
             </CardContent>
           </Card>
