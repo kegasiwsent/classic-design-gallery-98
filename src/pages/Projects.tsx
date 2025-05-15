@@ -6,6 +6,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import OngoingProjects from "@/components/OngoingProjects";
 
 interface Project {
   id: string;
@@ -55,6 +56,16 @@ const Projects = () => {
             </p>
           </div>
 
+          {/* Ongoing Projects Section */}
+          <div className="mb-16">
+            <h2 className="font-serif text-3xl font-bold mb-6 text-center">Ongoing Projects</h2>
+            <div className="w-16 h-1 bg-interior-gold mx-auto mb-12"></div>
+            <OngoingProjects />
+          </div>
+
+          <h2 className="font-serif text-3xl font-bold mb-6 text-center">Completed Projects</h2>
+          <div className="w-16 h-1 bg-interior-gold mx-auto mb-12"></div>
+          
           <Tabs defaultValue="all" className="w-full">
             <div className="flex justify-center mb-12">
               <TabsList className="bg-gray-100">
