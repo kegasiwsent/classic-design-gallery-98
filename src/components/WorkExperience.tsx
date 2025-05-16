@@ -2,36 +2,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Briefcase } from "lucide-react";
-
-interface TimelineItemProps {
-  year: string;
-  title: string;
-  description: string;
-  tags?: string[];
-}
-
-const TimelineItem = ({ year, title, description, tags = [] }: TimelineItemProps) => (
-  <div className="relative pl-8 pb-12 border-l border-blue-light/30 last:border-0 last:pb-0">
-    <div className="absolute left-[-8px] bg-blue-medium text-white p-1.5 rounded-full">
-      <Briefcase size={16} />
-    </div>
-    <div className="mb-2">
-      <span className="inline-block text-blue-medium font-semibold mb-2">{year}</span>
-      <h3 className="text-xl font-serif text-gray-dark mb-2">{title}</h3>
-      <p className="text-gray-medium mb-3">{description}</p>
-      {tags.length > 0 && (
-        <div className="flex flex-wrap gap-2">
-          {tags.map((tag, index) => (
-            <Badge key={index} variant="outline" className="bg-blue-light/10 text-blue-dark border-blue-light/20">
-              {tag}
-            </Badge>
-          ))}
-        </div>
-      )}
-    </div>
-  </div>
-);
 
 const CountUpAnimation = ({ targetValue }: { targetValue: number }) => {
   const [count, setCount] = useState(0);
@@ -83,33 +53,18 @@ const CountUpAnimation = ({ targetValue }: { targetValue: number }) => {
   return <span ref={countRef}>{count}</span>;
 };
 
+const YearAnimation = ({ year }: { year: number }) => {
+  return (
+    <div className="flex items-center justify-center">
+      <span className="text-lg md:text-xl font-medium text-blue-medium">
+        <CountUpAnimation targetValue={year} />
+      </span>
+    </div>
+  );
+};
+
 const WorkExperience = () => {
-  const timelineData: TimelineItemProps[] = [
-    {
-      year: "2023 - 2025",
-      title: "Senior 3D Visualization Specialist",
-      description: "Led high-profile architectural visualization projects for international clients, implementing advanced rendering techniques and VR experiences.",
-      tags: ["Architectural Visualization", "VR/AR", "Team Leadership"]
-    },
-    {
-      year: "2019 - 2023",
-      title: "3D Visualization Team Lead",
-      description: "Managed a team of 3D artists, established visualization standards, and delivered complex interior and exterior rendering projects.",
-      tags: ["Project Management", "Interior Visualization", "Client Relations"]
-    },
-    {
-      year: "2015 - 2019",
-      title: "3D Visualization Artist",
-      description: "Created photorealistic interior and exterior renderings for residential and commercial projects, collaborating with architects and designers.",
-      tags: ["3D Modeling", "Photorealistic Rendering", "Post-production"]
-    },
-    {
-      year: "2009 - 2015",
-      title: "Junior 3D Artist",
-      description: "Started career in 3D visualization, working on architectural models, material creation, and basic rendering techniques.",
-      tags: ["3D Modeling", "Texturing", "Lighting"]
-    }
-  ];
+  const years = [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025];
 
   return (
     <section className="bg-white py-16 md:py-24">
@@ -122,10 +77,15 @@ const WorkExperience = () => {
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-16">
           <Card className="border-t-4 border-t-blue-medium shadow-card hover:shadow-lg transition-shadow duration-300">
             <CardContent className="p-6 md:p-8">
-              <h3 className="font-serif text-xl md:text-2xl mb-6 text-blue-dark">Professional Timeline</h3>
-              <div className="ml-2">
-                {timelineData.map((item, index) => (
-                  <TimelineItem key={index} {...item} />
+              <h3 className="font-serif text-xl md:text-2xl mb-6 text-blue-dark">Years of Experience</h3>
+              <div className="grid grid-cols-4 sm:grid-cols-5 gap-4 md:gap-6">
+                {years.map((year) => (
+                  <div 
+                    key={year} 
+                    className="bg-blue-light/10 rounded-lg p-3 flex items-center justify-center text-center shadow-sm hover:shadow-md transition-shadow duration-300"
+                  >
+                    <YearAnimation year={year} />
+                  </div>
                 ))}
               </div>
             </CardContent>
