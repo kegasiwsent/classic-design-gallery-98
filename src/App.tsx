@@ -1,25 +1,37 @@
-
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Index from "@/pages/Index";
-import NotFound from "@/pages/NotFound";
-import ProjectDetail from "@/components/ProjectDetail";
 import Projects from "@/pages/Projects";
-import { Toaster } from "@/components/ui/toaster";
+import ProjectDetail from "@/components/ProjectDetail";
+import NotFound from "@/pages/NotFound";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import OngoingProjectDetail from "@/components/OngoingProjectDetail";
 
-const App = () => {
+function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Index />,
+      errorElement: <NotFound />,
+    },
+    {
+      path: "/projects",
+      element: <Projects />,
+    },
+    {
+      path: "/project/:projectId",
+      element: <ProjectDetail />,
+    },
+    {
+      path: "/ongoing-project/:projectId",
+      element: <OngoingProjectDetail />,
+    },
+  ]);
+
   return (
-    <Router>
-      <div className="min-h-screen flex flex-col bg-background relative">
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/project/:projectId" element={<ProjectDetail />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        <Toaster />
-      </div>
-    </Router>
+    <RouterProvider router={router} />
   );
-};
+}
 
 export default App;
