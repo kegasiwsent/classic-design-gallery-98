@@ -41,25 +41,25 @@ const ServiceCategories = () => {
   
   const services = [
     {
-      title: "Modular Interiors",
+      title: "Home Interior",
       description: "Functional kitchen, wardrobe and storage solutions",
       image: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=600&q=80",
       type: "interior-design"
     },
     {
-      title: "Full Home Interiors",
+      title: "Office Interior",
       description: "Turnkey interior solutions for your home",
       image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80",
       type: "interior-design"
     },
     {
-      title: "Luxury Interiors",
+      title: "Hotel Interior",
       description: "Tailored interiors that redefine elegance",
       image: "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=600&q=80",
       type: "interior-design"
     },
     {
-      title: "Renovations",
+      title: "Home Renovation",
       description: "Expert solutions to upgrade your home",
       image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80",
       type: "interior-design"
