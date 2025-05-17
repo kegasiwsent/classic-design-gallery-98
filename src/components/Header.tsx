@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Menu, X, Instagram, Youtube, Linkedin, Facebook, Twitter } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
@@ -27,25 +27,6 @@ const Header = () => {
           <a href="#contact" className="text-sm text-interior-beige hover:text-interior-gold transition-colors font-medium">Contact Us</a>
           <a href="#extra" className="text-sm text-interior-beige hover:text-interior-gold transition-colors font-medium">Extra</a>
         </nav>
-
-        {/* Social Media Icons */}
-        <div className="hidden md:flex items-center gap-4">
-          <a href="#" className="text-interior-beige hover:text-interior-gold transition-colors hover:scale-110 transition-transform">
-            <Instagram size={20} />
-          </a>
-          <a href="#" className="text-interior-beige hover:text-interior-gold transition-colors hover:scale-110 transition-transform">
-            <Youtube size={20} />
-          </a>
-          <a href="#" className="text-interior-beige hover:text-interior-gold transition-colors hover:scale-110 transition-transform">
-            <Linkedin size={20} />
-          </a>
-          <a href="#" className="text-interior-beige hover:text-interior-gold transition-colors hover:scale-110 transition-transform">
-            <Facebook size={20} />
-          </a>
-          <a href="#" className="text-interior-beige hover:text-interior-gold transition-colors hover:scale-110 transition-transform">
-            <Twitter size={20} />
-          </a>
-        </div>
 
         {/* Mobile Menu Button */}
         <button className="md:hidden text-interior-beige" onClick={() => setIsMenuOpen(!isMenuOpen)}>

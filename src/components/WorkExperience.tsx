@@ -53,19 +53,7 @@ const CountUpAnimation = ({ targetValue }: { targetValue: number }) => {
   return <span ref={countRef}>{count}</span>;
 };
 
-const YearAnimation = ({ year }: { year: number }) => {
-  return (
-    <div className="flex items-center justify-center">
-      <span className="text-lg md:text-xl font-medium text-blue-medium">
-        <CountUpAnimation targetValue={year} />
-      </span>
-    </div>
-  );
-};
-
 const WorkExperience = () => {
-  const years = [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025];
-
   return (
     <section className="bg-white py-16 md:py-24">
       <div className="container-custom">
@@ -74,23 +62,7 @@ const WorkExperience = () => {
           <p className="section-subtitle">Professional journey and milestones in 3D visualization</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-16">
-          <Card className="border-t-4 border-t-blue-medium shadow-card hover:shadow-lg transition-shadow duration-300">
-            <CardContent className="p-6 md:p-8">
-              <h3 className="font-serif text-xl md:text-2xl mb-6 text-blue-dark">Years of Experience</h3>
-              <div className="grid grid-cols-4 sm:grid-cols-5 gap-4 md:gap-6">
-                {years.map((year) => (
-                  <div 
-                    key={year} 
-                    className="bg-blue-light/10 rounded-lg p-3 flex items-center justify-center text-center shadow-sm hover:shadow-md transition-shadow duration-300"
-                  >
-                    <YearAnimation year={year} />
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-          
+        <div className="grid md:grid-cols-1 gap-8 md:gap-12 mb-16">
           <div className="flex flex-col justify-center">
             <div className="text-center p-8 bg-gradient-to-br from-blue-light/10 to-blue-medium/20 rounded-xl shadow-soft">
               <div className="mb-6">
