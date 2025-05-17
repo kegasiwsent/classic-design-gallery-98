@@ -65,39 +65,27 @@ const ServiceCategories = () => {
       type: "interior-design"
     },
     {
-      title: "One-on-One Consultation",
+      title: "Restaurant Interior",
+      description: "Creative spaces for dining and entertainment",
+      image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=600&q=80",
+      type: "interior-design"
+    },
+    {
+      title: "Design Consultation",
       description: "Personalized design advice from our experts",
       image: "https://images.unsplash.com/photo-1577791465485-b80039b4d69a?auto=format&fit=crop&w=600&q=80",
       type: "design-consultation"
     },
     {
-      title: "Material Selection",
-      description: "Guidance on choosing the perfect materials for your space",
-      image: "https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=600&q=80",
-      type: "design-consultation"
-    },
-    {
-      title: "Timeline Planning",
+      title: "Project Management",
       description: "Comprehensive project scheduling and monitoring",
       image: "https://images.unsplash.com/photo-1550305080-4e029753abcf?auto=format&fit=crop&w=600&q=80",
       type: "project-management"
     },
     {
-      title: "Contractor Management",
-      description: "Coordination between all parties involved in your project",
-      image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80",
-      type: "project-management"
-    },
-    {
-      title: "Home Vastu Analysis",
+      title: "Vastu Shastra Consultation",
       description: "Comprehensive evaluation of your home's energy flow",
       image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=600&q=80",
-      type: "vastu-shastra"
-    },
-    {
-      title: "Vastu Correction Planning",
-      description: "Solutions to align your space with vastu principles",
-      image: "https://images.unsplash.com/photo-1560185127-6ed189bf02f4?auto=format&fit=crop&w=600&q=80",
       type: "vastu-shastra"
     }
   ];
