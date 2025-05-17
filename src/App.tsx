@@ -1,5 +1,7 @@
+
 import Index from "@/pages/Index";
 import Projects from "@/pages/Projects";
+import About from "@/pages/About";
 import ProjectDetail from "@/components/ProjectDetail";
 import NotFound from "@/pages/NotFound";
 import {
@@ -14,6 +16,10 @@ function App() {
       path: "/",
       element: <Index />,
       errorElement: <NotFound />,
+    },
+    {
+      path: "/about",
+      element: <About />,
     },
     {
       path: "/projects",
