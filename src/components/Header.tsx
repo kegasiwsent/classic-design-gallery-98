@@ -18,14 +18,12 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center justify-center gap-8 flex-1">
           <a href="#" className="text-sm text-interior-beige hover:text-interior-gold transition-colors font-medium">Home</a>
           <a href="#services" className="text-sm text-interior-beige hover:text-interior-gold transition-colors font-medium">Services</a>
           <a href="#about" className="text-sm text-interior-beige hover:text-interior-gold transition-colors font-medium">About</a>
           <a href="#portfolio" className="text-sm text-interior-beige hover:text-interior-gold transition-colors font-medium">Projects</a>
-          <a href="#blog" className="text-sm text-interior-beige hover:text-interior-gold transition-colors font-medium">Blog</a>
           <a href="#contact" className="text-sm text-interior-beige hover:text-interior-gold transition-colors font-medium">Contact Us</a>
-          <a href="#extra" className="text-sm text-interior-beige hover:text-interior-gold transition-colors font-medium">Extra</a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -42,9 +40,7 @@ const Header = () => {
             <a href="#services" className="text-sm text-interior-beige hover:text-interior-gold transition-colors py-2 border-b border-interior-gold/20">Services</a>
             <a href="#about" className="text-sm text-interior-beige hover:text-interior-gold transition-colors py-2 border-b border-interior-gold/20">About</a>
             <a href="#portfolio" className="text-sm text-interior-beige hover:text-interior-gold transition-colors py-2 border-b border-interior-gold/20">Projects</a>
-            <a href="#blog" className="text-sm text-interior-beige hover:text-interior-gold transition-colors py-2 border-b border-interior-gold/20">Blog</a>
-            <a href="#contact" className="text-sm text-interior-beige hover:text-interior-gold transition-colors py-2 border-b border-interior-gold/20">Contact Us</a>
-            <a href="#extra" className="text-sm text-interior-beige hover:text-interior-gold transition-colors py-2">Extra</a>
+            <a href="#contact" className="text-sm text-interior-beige hover:text-interior-gold transition-colors py-2">Contact Us</a>
           </nav>
         </div>
       )}
