@@ -1,4 +1,3 @@
-
 import { useParams, Link } from "react-router-dom";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
@@ -28,6 +27,15 @@ const OngoingProjectDetail = () => {
       </div>
     );
   }
+
+  const handleRequestProject = () => {
+    // Create WhatsApp message with project details
+    const message = `Hello, I'm interested in a project similar to "${project.name}" (Ongoing Project)!\n\nProject Type: ${project.type}\nLocation: ${project.location}\n\nI would like to discuss how we can create something similar for my space.`;
+    
+    // Redirect to WhatsApp with the message
+    const whatsappUrl = `https://wa.me/919377766717?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
+  };
 
   // Combine main image with additional images
   const allImages = [project.image, ...project.additionalImages];
@@ -132,7 +140,10 @@ const OngoingProjectDetail = () => {
             </dl>
             
             <div className="mt-8">
-              <Button className="w-full bg-interior-gold hover:bg-interior-gold/90 text-black">
+              <Button 
+                className="w-full bg-interior-gold hover:bg-interior-gold/90 text-black"
+                onClick={handleRequestProject}
+              >
                 Request Similar Project
               </Button>
             </div>

@@ -17,10 +17,21 @@ const ConsultationForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Create WhatsApp message with form data
+    const message = `Hello, I'd like to schedule a consultation!\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nMessage: ${formData.message}`;
+    
+    // Redirect to WhatsApp with the message
+    const whatsappUrl = `https://wa.me/919377766717?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
+    
+    // Show toast notification
     toast({
       title: "Form Submitted",
       description: "We'll get back to you shortly!",
     });
+    
+    // Clear form
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
