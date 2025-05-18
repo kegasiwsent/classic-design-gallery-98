@@ -4,6 +4,7 @@ import Projects from "@/pages/Projects";
 import About from "@/pages/About";
 import ProjectDetail from "@/components/ProjectDetail";
 import NotFound from "@/pages/NotFound";
+import Kitchen from "@/pages/Kitchen";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -32,6 +33,10 @@ function App() {
     {
       path: "/ongoing-project/:projectId",
       element: <OngoingProjectDetail />,
+    },
+    {
+      path: "/kitchen",
+      element: <Kitchen />,
     },
   ]);
 

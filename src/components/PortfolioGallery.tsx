@@ -1,5 +1,6 @@
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Link } from "react-router-dom";
 
 interface PortfolioItemProps {
   image: string;
@@ -129,9 +130,9 @@ const PortfolioGallery = () => {
         </Tabs>
 
         <div className="mt-16 text-center">
-          <button className="border border-interior-gold rounded-none text-interior-gold px-10 py-3 text-sm font-medium hover:bg-interior-gold/10 transition-colors uppercase tracking-wider">
+          <Link to="/kitchen" className="border border-interior-gold rounded-none text-interior-gold px-10 py-3 text-sm font-medium hover:bg-interior-gold/10 transition-colors uppercase tracking-wider inline-block">
             View All Projects
-          </button>
+          </Link>
         </div>
       </div>
     </section>
