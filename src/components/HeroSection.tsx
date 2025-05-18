@@ -1,6 +1,7 @@
 
 import { Button } from "./ui/button";
 import HeroSlideshow from "./HeroSlideshow";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -16,18 +17,27 @@ const HeroSection = () => {
           Create visual content which will be followed by walkthrough in order to get feel of end result before starting of the project.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-          <Button 
-            className="bg-blue-medium hover:bg-blue-dark text-white rounded-md px-8 py-6 text-base border border-blue-light/30 hover:scale-105 transition-transform"
-          >
-            Read more
-          </Button>
-          <Button 
-            variant="outline"
-            className="border-blue-medium text-white bg-gray-dark/50 hover:bg-blue-navy/50 rounded-md px-8 py-6 text-base hover:scale-105 transition-transform"
-          >
-            Our Services
-          </Button>
+        <div className="flex flex-col items-start space-y-3 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+          <p className="text-base md:text-lg font-medium text-white/90 mb-1">
+            One-stop shop for all things interiors
+          </p>
+          <Link to="/kitchen" className="text-interior-gold hover:text-interior-gold/80 transition-colors underline underline-offset-4 font-medium">
+            Explore our Kitchen Designs →
+          </Link>
+          
+          <div className="flex flex-col sm:flex-row gap-4 mt-4">
+            <Button 
+              className="bg-blue-medium hover:bg-blue-dark text-white rounded-md px-8 py-6 text-base border border-blue-light/30 hover:scale-105 transition-transform"
+            >
+              Read more
+            </Button>
+            <Button 
+              variant="outline"
+              className="border-blue-medium text-white bg-gray-dark/50 hover:bg-blue-navy/50 rounded-md px-8 py-6 text-base hover:scale-105 transition-transform"
+            >
+              Our Services
+            </Button>
+          </div>
         </div>
       </div>
     </section>
