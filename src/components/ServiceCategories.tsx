@@ -30,10 +30,9 @@ const ServiceCategory = ({ title, description, image }: ServiceCategoryProps) =>
 };
 
 const ServiceCategories = () => {
-  const [activeTab, setActiveTab] = useState("all");
+  const [activeTab, setActiveTab] = useState("interior-design");
   
   const serviceTypes = [
-    { id: "all", label: "All Services" },
     { id: "interior-design", label: "Interior Design" },
     { id: "design-consultation", label: "Design Consultation" },
     { id: "project-management", label: "Project Management" },
@@ -110,9 +109,7 @@ const ServiceCategories = () => {
     }
   ];
 
-  const filteredServices = activeTab === "all" 
-    ? services 
-    : services.filter(service => service.type === activeTab);
+  const filteredServices = services.filter(service => service.type === activeTab);
 
   return (
     <section className="py-24 bg-gradient-to-b from-white to-gray-lightest" id="services">
@@ -130,7 +127,7 @@ const ServiceCategories = () => {
 
         <div className="flex justify-center mb-10">
           <Tabs 
-            defaultValue="all" 
+            defaultValue="interior-design" 
             value={activeTab} 
             onValueChange={setActiveTab}
             className="w-full max-w-4xl"
