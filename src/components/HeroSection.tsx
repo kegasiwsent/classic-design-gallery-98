@@ -22,7 +22,7 @@ const HeroSection = () => {
             One-stop shop for all things interiors
           </p>
           <Link to="/kitchen" className="text-interior-gold hover:text-interior-gold/80 transition-colors underline underline-offset-4 font-medium">
-            Explore our Kitchen Designs →
+            Explore All Our Services →
           </Link>
           
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
