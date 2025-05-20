@@ -2,6 +2,7 @@
 import { Button } from "./ui/button";
 import HeroSlideshow from "./HeroSlideshow";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const HeroSection = () => {
   return (
@@ -26,17 +27,20 @@ const HeroSection = () => {
           </Link>
           
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
-            <Button 
-              className="bg-blue-medium hover:bg-blue-dark text-white rounded-md px-8 py-6 text-base border border-blue-light/30 hover:scale-105 transition-transform"
+            <HashLink 
+              to="/#about"
+              smooth
+              className="bg-blue-medium hover:bg-blue-dark text-white rounded-md px-8 py-6 text-base border border-blue-light/30 hover:scale-105 transition-transform inline-flex items-center justify-center"
             >
               Read more
-            </Button>
-            <Button 
-              variant="outline"
-              className="border-blue-medium text-white bg-gray-dark/50 hover:bg-blue-navy/50 rounded-md px-8 py-6 text-base hover:scale-105 transition-transform"
+            </HashLink>
+            <HashLink 
+              to="/#services"
+              smooth
+              className="border-blue-medium text-white bg-gray-dark/50 hover:bg-blue-navy/50 rounded-md px-8 py-6 text-base hover:scale-105 transition-transform inline-flex items-center justify-center"
             >
               Our Services
-            </Button>
+            </HashLink>
           </div>
         </div>
       </div>
