@@ -2,6 +2,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 interface ServiceCategoryProps {
   title: string;
@@ -36,7 +37,8 @@ const ServiceCategories = () => {
     { id: "interior-design", label: "Interior Design" },
     { id: "design-consultation", label: "Design Consultation" },
     { id: "project-management", label: "Project Management" },
-    { id: "vastu-shastra", label: "Vastu Shastra" }
+    { id: "vastu-shastra", label: "Vastu Shastra" },
+    { id: "kitchen", label: "Kitchen Designs" }
   ];
   
   const services = [
@@ -87,6 +89,24 @@ const ServiceCategories = () => {
       description: "Comprehensive evaluation of your home's energy flow",
       image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=600&q=80",
       type: "vastu-shastra"
+    },
+    {
+      title: "Modern Kitchen Designs",
+      description: "Functional and stylish kitchen solutions for modern homes",
+      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80",
+      type: "kitchen"
+    },
+    {
+      title: "Kitchen Remodeling",
+      description: "Transform your outdated kitchen with our expert remodeling services",
+      image: "https://images.unsplash.com/photo-1586208958839-06c17cacdf08?auto=format&fit=crop&w=600&q=80",
+      type: "kitchen"
+    },
+    {
+      title: "Custom Kitchen Cabinets",
+      description: "Personalized storage solutions designed for your unique kitchen space",
+      image: "https://images.unsplash.com/photo-1604709177225-055f99402ea3?auto=format&fit=crop&w=600&q=80",
+      type: "kitchen"
     }
   ];
 
@@ -131,12 +151,17 @@ const ServiceCategories = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {filteredServices.map((service, index) => (
-            <ServiceCategory
+            <Link 
               key={index}
-              title={service.title}
-              description={service.description}
-              image={service.image}
-            />
+              to={service.type === "kitchen" ? "/kitchen" : "#"}
+              className="block"
+            >
+              <ServiceCategory
+                title={service.title}
+                description={service.description}
+                image={service.image}
+              />
+            </Link>
           ))}
         </div>
       </div>
