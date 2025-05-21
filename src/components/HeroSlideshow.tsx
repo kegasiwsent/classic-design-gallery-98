@@ -2,9 +2,9 @@
 import { useState, useEffect } from "react";
 
 const images = [
-  "/lovable-uploads/0a163206-d09d-4111-936d-cd67aec3aba2.png",
-  "https://images.unsplash.com/photo-1615874959474-d609969a20ed?q=80&w=1780&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1770&auto=format&fit=crop",
+  "/lovable-uploads/a4671b8b-21e9-4380-9b28-e236150e0063.png",
+  "/lovable-uploads/12767243-cc6a-4e8d-aa2e-5e1d902a7a8a.png",
+  "/lovable-uploads/63508926-8967-4a93-a988-ff2600f2b10a.png",
 ];
 
 const HeroSlideshow = () => {
@@ -28,6 +28,8 @@ const HeroSlideshow = () => {
           }`}
           style={{ 
             backgroundImage: `url('${image}')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         />
       ))}
