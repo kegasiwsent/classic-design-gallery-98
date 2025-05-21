@@ -27,13 +27,12 @@ const HeroSection = () => {
           </Link>
           
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
-            <HashLink 
-              to="/#about"
-              smooth
+            <Link 
+              to="/about"
               className="bg-blue-medium hover:bg-blue-dark text-white rounded-md px-8 py-6 text-base border border-blue-light/30 hover:scale-105 transition-transform inline-flex items-center justify-center"
             >
               Read more
-            </HashLink>
+            </Link>
             <HashLink 
               to="/#services"
               smooth
