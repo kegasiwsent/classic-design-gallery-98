@@ -5,6 +5,9 @@ const images = [
   "/lovable-uploads/a4671b8b-21e9-4380-9b28-e236150e0063.png",
   "/lovable-uploads/12767243-cc6a-4e8d-aa2e-5e1d902a7a8a.png",
   "/lovable-uploads/63508926-8967-4a93-a988-ff2600f2b10a.png",
+  "/lovable-uploads/f23c5231-b8c7-4abb-b877-a3a9b256cf29.png",
+  "/lovable-uploads/5e93660d-9259-4eab-b5ae-50beb2922a8f.png",
+  "/lovable-uploads/895ac89c-c005-49ef-b28a-f4510f55e09f.png",
 ];
 
 const HeroSlideshow = () => {
