@@ -1,23 +1,31 @@
+
 import { useParams, Link } from "react-router-dom";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Image } from "lucide-react";
+import { useState } from "react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 // This is just mock data - in a real app this would come from an API or database
 const projectsData = {
   "contemporary-comfort": {
-    title: "Contemporary Comfort",
-    category: "Master Bedroom",
-    description: "A modern approach to bedroom design with clean lines and comfortable textures. This project focused on creating a tranquil retreat that balances style with functionality. The neutral color palette is enhanced with subtle textures and strategic lighting to create a calming atmosphere.",
+    title: "Project 1",
+    category: "Residential Interior",
+    description: "A modern approach to residential interior design featuring elegant spaces with refined finishes. This project incorporates contemporary elements with functional layout planning, custom furniture, and thoughtful lighting solutions to create a sophisticated yet comfortable living environment.",
     client: "Private Residence",
-    location: "Manhattan, NY",
+    location: "Mumbai, India",
     year: "2023",
-    mainImage: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80",
+    mainImage: "/lovable-uploads/f7eb8f22-a7f4-4f2c-ac7a-92f8e9bfa0a7.png",
     galleryImages: [
-      "https://images.unsplash.com/photo-1616486506648-12b32be638b9?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1616137148650-4aa7b11e9518?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1616486506434-7b3453c2f52f?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1616137098530-156df2665afc?auto=format&fit=crop&w=600&q=80"
+      "/lovable-uploads/f7eb8f22-a7f4-4f2c-ac7a-92f8e9bfa0a7.png",
+      "/lovable-uploads/6343d498-d1fb-4f90-8cec-9d41e38d06ef.png",
+      "/lovable-uploads/78da7c8e-6576-4717-9e98-035acd9d8953.png",
+      "/lovable-uploads/9d151cff-36c4-4f79-b213-43a42890d02c.png",
+      "/lovable-uploads/8166d5f5-c434-4975-bd16-8dd9f6e80489.png",
+      "/lovable-uploads/c301d838-6e26-4aa3-8deb-19a06f2b9c60.png",
+      "/lovable-uploads/fc50f247-2270-4eb7-8194-dd3b1ba39fd1.png",
+      "/lovable-uploads/c20e2172-d110-4581-8c34-7b44ba5ed327.png",
+      "/lovable-uploads/cd0cee40-9d6d-47e2-b009-fbc93731c461.png"
     ]
   },
   "elegant-lighting": {
@@ -122,6 +130,7 @@ const projectsData = {
 
 const ProjectDetail = () => {
   const { projectId } = useParams<{ projectId: string }>();
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   
   // Check if projectId exists in our data
   const project = projectId && projectsData[projectId as keyof typeof projectsData];
@@ -183,7 +192,11 @@ const ProjectDetail = () => {
             <h2 className="font-serif text-2xl text-white mb-6 mt-12">Project Gallery</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {project.galleryImages.map((image, index) => (
-                <div key={index} className="relative group cursor-pointer overflow-hidden rounded-md">
+                <div 
+                  key={index} 
+                  className="relative group cursor-pointer overflow-hidden rounded-md"
+                  onClick={() => setSelectedImage(image)}
+                >
                   <AspectRatio ratio={3/2}>
                     <img 
                       src={image} 
@@ -231,6 +244,18 @@ const ProjectDetail = () => {
           </div>
         </div>
       </div>
+
+      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+        <DialogContent className="max-w-4xl bg-black border-gray-800">
+          <div className="relative w-full">
+            <img
+              src={selectedImage || ''}
+              alt="Enlarged view"
+              className="w-full h-auto object-contain max-h-[80vh]"
+            />
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
