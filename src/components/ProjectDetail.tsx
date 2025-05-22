@@ -98,17 +98,22 @@ const projectsData = {
     ]
   },
   "productive-environment": {
-    title: "Productive Environment",
+    title: "Eternal Office Space",
     category: "Office Space",
-    description: "Designing office spaces that enhance productivity and creativity. This project incorporates ergonomic furniture, strategic space planning, and biophilic design elements to create an inspiring workplace.",
-    client: "Tech Startup",
-    location: "Austin, TX",
-    year: "2023",
-    mainImage: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
+    description: "A modern corporate workspace design featuring innovative layouts, premium materials, and thoughtful branding elements. This office project combines functionality with aesthetic excellence, creating a productive and inspiring work environment.",
+    client: "Eternal Web Pvt. Ltd.",
+    location: "Mumbai, India",
+    year: "2024",
+    mainImage: "/lovable-uploads/b30960a1-e90c-44f3-9a65-4d27d8d39085.png",
     galleryImages: [
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=600&q=80"
+      "/lovable-uploads/b30960a1-e90c-44f3-9a65-4d27d8d39085.png",
+      "/lovable-uploads/ceca21b6-fa7f-48fd-9915-ac90f2372f98.png",
+      "/lovable-uploads/caaa88f5-152a-4b88-8c82-7e7d5fecca9a.png", 
+      "/lovable-uploads/9be51e35-16ce-4508-be50-74e5c57c154c.png",
+      "/lovable-uploads/1d7f8c01-ea4a-443b-9dee-4929ce574665.png",
+      "/lovable-uploads/b4c39dc9-e91b-4691-a493-aa630a805b17.png",
+      "/lovable-uploads/cc953a97-dd75-499d-84cd-ec13f2cb0d7c.png",
+      "/lovable-uploads/60a896e8-2e9a-4e73-adcf-b7b0be683a6e.png"
     ]
   },
   "first-impressions": {

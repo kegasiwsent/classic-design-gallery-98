@@ -31,8 +31,8 @@ const Projects = () => {
       { id: "elegant-lighting", image: "https://images.unsplash.com/photo-1616137148650-4aa7b11e9518?auto=format&fit=crop&w=600&q=80", category: "False Ceiling", title: "Elegant Lighting", description: "Creative ceiling designs with innovative lighting solutions." },
       { id: "modern-functionality", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80", category: "Kitchen Designs", title: "Modern Functionality", description: "Efficient kitchen layouts combining style with practical functionality." },
     ],
-    commercial: [
-      { id: "productive-environment", image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=600&q=80", category: "Office Space", title: "Productive Environment", description: "Designing office spaces that enhance productivity and creativity." },
+    office: [
+      { id: "productive-environment", image: "/lovable-uploads/b30960a1-e90c-44f3-9a65-4d27d8d39085.png", category: "Office Space", title: "Eternal Office Space", description: "Modern corporate office design with innovative layouts and thoughtful branding elements." },
       { id: "first-impressions", image: "https://images.unsplash.com/photo-1600508774634-4e11d34730e2?auto=format&fit=crop&w=600&q=80", category: "Reception Area", title: "First Impressions", description: "Creating inviting reception areas that leave lasting impressions." },
     ],
     hospitality: [
@@ -71,7 +71,7 @@ const Projects = () => {
               <TabsList className="bg-gray-100">
                 <TabsTrigger value="all" className="font-medium text-sm">All</TabsTrigger>
                 <TabsTrigger value="residential" className="font-medium text-sm">Residential</TabsTrigger>
-                <TabsTrigger value="commercial" className="font-medium text-sm">Commercial</TabsTrigger>
+                <TabsTrigger value="office" className="font-medium text-sm">Office</TabsTrigger>
                 <TabsTrigger value="hospitality" className="font-medium text-sm">Hospitality</TabsTrigger>
               </TabsList>
             </div>
