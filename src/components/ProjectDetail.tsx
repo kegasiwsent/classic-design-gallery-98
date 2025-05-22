@@ -24,14 +24,7 @@ const projectsData = {
       "/lovable-uploads/c301d838-6e26-4aa3-8deb-19a06f2b9c60.png",
       "/lovable-uploads/fc50f247-2270-4eb7-8194-dd3b1ba39fd1.png",
       "/lovable-uploads/c20e2172-d110-4581-8c34-7b44ba5ed327.png",
-      "/lovable-uploads/cd0cee40-9d6d-47e2-b009-fbc93731c461.png",
-      "/lovable-uploads/0a163206-d09d-4111-936d-cd67aec3aba2.png",
-      "/lovable-uploads/12767243-cc6a-4e8d-aa2e-5e1d902a7a8a.png",
-      "/lovable-uploads/172a6183-431f-48c7-a892-6f5a6858717c.png",
-      "/lovable-uploads/39541725-2f56-48f5-b0cf-e2d30682ad23.png",
-      "/lovable-uploads/5e93660d-9259-4eab-b5ae-50beb2922a8f.png",
-      "/lovable-uploads/63508926-8967-4a93-a988-ff2600f2b10a.png",
-      "/lovable-uploads/71fc2b60-e07c-42dc-9f9e-01e7409f0600.png"
+      "/lovable-uploads/cd0cee40-9d6d-47e2-b009-fbc93731c461.png"
     ]
   },
   "elegant-lighting": {
