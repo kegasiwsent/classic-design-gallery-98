@@ -25,6 +25,7 @@ const Projects = () => {
       { id: "space-optimization", image: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=600&q=80", category: "Wardrobe Designs", title: "Space Optimization", description: "Maximizing storage with thoughtfully designed wardrobe solutions." },
       { id: "family-gatherings", image: "https://images.unsplash.com/photo-1603512500383-e0d26e33d7fc?auto=format&fit=crop&w=600&q=80", category: "Dining Room", title: "Family Gatherings", description: "Creating spaces that bring families together over meals and conversations." },
       { id: "urban-retreat", image: "https://images.unsplash.com/photo-1600607687644-c7f34b5f4f1b?auto=format&fit=crop&w=600&q=80", category: "Living Room", title: "Urban Retreat", description: "Transforming living spaces into comfortable urban sanctuaries." },
+      { id: "sk-mishra", image: "/lovable-uploads/e59cef9a-5949-44aa-ba5b-7778c8fc62d2.png", category: "Architecture", title: "SK Mishra", description: "Contemporary architectural design featuring elegant modern aesthetics with functional living spaces." },
     ],
     residential: [
       { id: "contemporary-comfort", image: "/lovable-uploads/f7eb8f22-a7f4-4f2c-ac7a-92f8e9bfa0a7.png", category: "Residential Interior", title: "Project 1", description: "A modern approach to residential interior design featuring elegant spaces with refined finishes." },
@@ -35,9 +36,8 @@ const Projects = () => {
       { id: "productive-environment", image: "/lovable-uploads/b30960a1-e90c-44f3-9a65-4d27d8d39085.png", category: "Office Space", title: "Eternal Office Space", description: "Modern corporate office design with innovative layouts and thoughtful branding elements." },
       { id: "first-impressions", image: "https://images.unsplash.com/photo-1600508774634-4e11d34730e2?auto=format&fit=crop&w=600&q=80", category: "Reception Area", title: "First Impressions", description: "Creating inviting reception areas that leave lasting impressions." },
     ],
-    hospitality: [
-      { id: "luxury-comfort", image: "https://images.unsplash.com/photo-1600011689032-8b628b8a8747?auto=format&fit=crop&w=600&q=80", category: "Hotel Suite", title: "Luxury Comfort", description: "Elegant hotel suites designed for maximum comfort and sophistication." },
-      { id: "dining-experience", image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=600&q=80", category: "Restaurant Design", title: "Dining Experience", description: "Restaurant interiors that enhance the overall dining experience." },
+    architecture: [
+      { id: "sk-mishra", image: "/lovable-uploads/e59cef9a-5949-44aa-ba5b-7778c8fc62d2.png", category: "Architecture", title: "SK Mishra", description: "Contemporary architectural design featuring elegant modern aesthetics with functional living spaces." },
     ],
   };
 
@@ -72,7 +72,7 @@ const Projects = () => {
                 <TabsTrigger value="all" className="font-medium text-sm">All</TabsTrigger>
                 <TabsTrigger value="residential" className="font-medium text-sm">Residential</TabsTrigger>
                 <TabsTrigger value="office" className="font-medium text-sm">Office</TabsTrigger>
-                <TabsTrigger value="hospitality" className="font-medium text-sm">Hospitality</TabsTrigger>
+                <TabsTrigger value="architecture" className="font-medium text-sm">Architecture</TabsTrigger>
               </TabsList>
             </div>
             

@@ -1,3 +1,4 @@
+
 import { useParams, Link } from "react-router-dom";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
@@ -128,6 +129,21 @@ const projectsData = {
       "https://images.unsplash.com/photo-1600508774634-4e11d34730e2?auto=format&fit=crop&w=600&q=80",
       "https://images.unsplash.com/photo-1564069114553-7215e1ff1890?auto=format&fit=crop&w=600&q=80",
       "https://images.unsplash.com/photo-1577992443062-54883f8e95c3?auto=format&fit=crop&w=600&q=80"
+    ]
+  },
+  "sk-mishra": {
+    title: "SK Mishra",
+    category: "Architecture",
+    description: "Contemporary architectural design featuring elegant modern aesthetics with functional living spaces. This residential project showcases innovative form and structure with attention to natural light and spatial flow.",
+    client: "SK Mishra Residence",
+    location: "Mumbai, India",
+    year: "2024",
+    mainImage: "/lovable-uploads/e59cef9a-5949-44aa-ba5b-7778c8fc62d2.png",
+    galleryImages: [
+      "/lovable-uploads/e59cef9a-5949-44aa-ba5b-7778c8fc62d2.png",
+      "/lovable-uploads/6b6e6aa1-c1a0-4a58-8e67-206abd94be9c.png",
+      "/lovable-uploads/8ebcfa03-3693-4995-9943-6acd25347333.png",
+      "/lovable-uploads/91d4631a-5383-447f-95a1-ef5211b94c0c.png"
     ]
   }
 };
