@@ -59,7 +59,7 @@ const WorkExperience = () => {
       <div className="container-custom">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="section-title mb-4">Our Experience</h2>
-          <p className="section-subtitle">Professional journey and milestones in 3D visualization</p>
+          <p className="section-subtitle">Professional journey and milestones in Interior Designing</p>
         </div>
 
         <div className="grid md:grid-cols-1 gap-8 md:gap-12 mb-16">
@@ -72,19 +72,19 @@ const WorkExperience = () => {
                 <span className="font-serif text-4xl md:text-5xl text-blue-medium">+</span>
               </div>
               <h3 className="text-2xl md:text-3xl font-serif text-gray-dark mb-4">Years of Experience</h3>
-              <p className="text-gray-medium">From 2009 to 2025, delivering excellence in 3D visualization for clients worldwide</p>
+              <p className="text-gray-medium">From 2009 to 2025, The Philosophical Study Of Beauty And Art</p>
             </div>
             
             <div className="mt-8 grid grid-cols-2 gap-4">
               <div className="bg-interior-navy/5 p-6 rounded-lg text-center">
                 <div className="font-bold text-3xl md:text-4xl text-blue-dark mb-2">
-                  <CountUpAnimation targetValue={500} />+
+                  <CountUpAnimation targetValue={400} />+
                 </div>
                 <p className="text-gray-medium">Projects Completed</p>
               </div>
               <div className="bg-interior-navy/5 p-6 rounded-lg text-center">
                 <div className="font-bold text-3xl md:text-4xl text-blue-dark mb-2">
-                  <CountUpAnimation targetValue={300} />+
+                  <CountUpAnimation targetValue={350} />+
                 </div>
                 <p className="text-gray-medium">Happy Clients</p>
               </div>
