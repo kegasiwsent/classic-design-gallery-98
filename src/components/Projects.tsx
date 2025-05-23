@@ -4,6 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Link } from "react-router-dom";
+import { lazy, Suspense } from "react";
 
 interface Project {
   id: string;
@@ -71,7 +72,10 @@ const Projects = () => {
                       <AspectRatio ratio={3/2}>
                         <img 
                           src={project.image} 
-                          alt={project.title} 
+                          alt={project.title}
+                          loading="lazy"
+                          width="600"
+                          height="400"
                           className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110" 
                         />
                       </AspectRatio>

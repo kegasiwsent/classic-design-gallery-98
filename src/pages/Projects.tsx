@@ -1,4 +1,5 @@
-import { useState } from "react";
+
+import { useState, lazy, Suspense } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -60,7 +61,9 @@ const Projects = () => {
           <div className="mb-16">
             <h2 className="font-serif text-3xl font-bold mb-6 text-center">Ongoing Projects</h2>
             <div className="w-16 h-1 bg-interior-gold mx-auto mb-12"></div>
-            <OngoingProjects />
+            <Suspense fallback={<div className="py-8 text-center">Loading ongoing projects...</div>}>
+              <OngoingProjects />
+            </Suspense>
           </div>
 
           <h2 className="font-serif text-3xl font-bold mb-6 text-center">Completed Projects</h2>
@@ -85,7 +88,10 @@ const Projects = () => {
                         <AspectRatio ratio={3/2}>
                           <img 
                             src={project.image} 
-                            alt={project.title} 
+                            alt={project.title}
+                            loading="lazy"
+                            width="600"
+                            height="400" 
                             className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105" 
                           />
                         </AspectRatio>

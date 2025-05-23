@@ -12,14 +12,46 @@ const images = [
 
 const HeroSlideshow = () => {
   const [currentImage, setCurrentImage] = useState(0);
+  const [loadedImages, setLoadedImages] = useState<string[]>([]);
+
+  // Preload first image immediately
+  useEffect(() => {
+    const img = new Image();
+    img.src = images[0];
+    img.onload = () => {
+      setLoadedImages([images[0]]);
+    };
+  }, []);
+
+  // Preload other images progressively
+  useEffect(() => {
+    const preloadImages = async () => {
+      for (let i = 1; i < images.length; i++) {
+        await new Promise<void>((resolve) => {
+          const img = new Image();
+          img.src = images[i];
+          img.onload = () => {
+            setLoadedImages(prev => [...prev, images[i]]);
+            resolve();
+          };
+        });
+      }
+    };
+
+    preloadImages();
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+      setCurrentImage((prevImage) => {
+        const nextIndex = (prevImage + 1) % images.length;
+        // Only advance to next image if it's already loaded
+        return loadedImages.includes(images[nextIndex]) ? nextIndex : prevImage;
+      });
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [loadedImages]);
 
   return (
     <div className="relative w-full h-full">
@@ -30,10 +62,11 @@ const HeroSlideshow = () => {
             index === currentImage ? "opacity-100" : "opacity-0"
           }`}
           style={{ 
-            backgroundImage: `url('${image}')`,
+            backgroundImage: loadedImages.includes(image) ? `url('${image}')` : "none",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
+          aria-hidden={index !== currentImage}
         />
       ))}
       <div className="absolute inset-0 bg-interior-navy/50 bg-gradient-to-b from-black/20 to-black/70"></div>
