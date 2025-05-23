@@ -17,7 +17,7 @@ const Projects = () => {
   const projectsData = {
     all: [
       { id: "contemporary-comfort", image: "/lovable-uploads/f7eb8f22-a7f4-4f2c-ac7a-92f8e9bfa0a7.png", category: "Residential Interior", title: "Project 1", description: "A modern approach to residential interior design featuring elegant spaces with refined finishes." },
-      { id: "elegant-lighting", image: "https://images.unsplash.com/photo-1616137148650-4aa7b11e9518?auto=format&fit=crop&w=600&q=80", category: "False Ceiling", title: "Elegant Lighting", description: "Creative ceiling designs with innovative lighting solutions." },
+      { id: "elegant-lighting", image: "/lovable-uploads/f99c3da1-0d31-4847-bf6e-9dceb62e04cf.png", category: "Residential Interior", title: "Project 2", description: "Contemporary home interior design in Ahmedabad featuring stylish spaces with detailed woodwork and elegant lighting solutions." },
       { id: "modern-functionality", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80", category: "Kitchen Designs", title: "Modern Functionality", description: "Efficient kitchen layouts combining style with practical functionality." },
       { id: "space-optimization", image: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=600&q=80", category: "Wardrobe Designs", title: "Space Optimization", description: "Maximizing storage with thoughtfully designed wardrobe solutions." },
       { id: "family-gatherings", image: "https://images.unsplash.com/photo-1603512500383-e0d26e33d7fc?auto=format&fit=crop&w=600&q=80", category: "Dining Room", title: "Family Gatherings", description: "Creating spaces that bring families together over meals and conversations." },
@@ -26,7 +26,7 @@ const Projects = () => {
     ],
     residential: [
       { id: "contemporary-comfort", image: "/lovable-uploads/f7eb8f22-a7f4-4f2c-ac7a-92f8e9bfa0a7.png", category: "Residential Interior", title: "Project 1", description: "A modern approach to residential interior design featuring elegant spaces with refined finishes." },
-      { id: "elegant-lighting", image: "https://images.unsplash.com/photo-1616137148650-4aa7b11e9518?auto=format&fit=crop&w=600&q=80", category: "False Ceiling", title: "Elegant Lighting", description: "Creative ceiling designs with innovative lighting solutions." },
+      { id: "elegant-lighting", image: "/lovable-uploads/f99c3da1-0d31-4847-bf6e-9dceb62e04cf.png", category: "Residential Interior", title: "Project 2", description: "Contemporary home interior design in Ahmedabad featuring stylish spaces with detailed woodwork and elegant lighting solutions." },
       { id: "modern-functionality", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80", category: "Kitchen Designs", title: "Modern Functionality", description: "Efficient kitchen layouts combining style with practical functionality." },
     ],
     office: [

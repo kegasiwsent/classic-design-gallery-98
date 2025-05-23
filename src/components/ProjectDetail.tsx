@@ -1,4 +1,3 @@
-
 import { useParams, Link } from "react-router-dom";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
@@ -29,17 +28,23 @@ const projectsData = {
     ]
   },
   "elegant-lighting": {
-    title: "Elegant Lighting",
-    category: "False Ceiling",
-    description: "Creative ceiling designs with innovative lighting solutions that transform the ambiance of the entire space. This project demonstrates how thoughtful lighting design can elevate interior architecture and create distinctive environments.",
-    client: "Luxury Apartment Complex",
-    location: "Chicago, IL",
-    year: "2022",
-    mainImage: "https://images.unsplash.com/photo-1616137148650-4aa7b11e9518?auto=format&fit=crop&w=1200&q=80",
+    title: "Project 2",
+    category: "Residential Interior",
+    description: "Contemporary home interior design in Ahmedabad featuring stylish spaces with detailed woodwork and elegant lighting solutions. This residential project balances modern aesthetics with functional living spaces, creating a comfortable and sophisticated home environment.",
+    client: "Private Residence",
+    location: "Ahmedabad, India",
+    year: "2024",
+    mainImage: "/lovable-uploads/f99c3da1-0d31-4847-bf6e-9dceb62e04cf.png",
     galleryImages: [
-      "https://images.unsplash.com/photo-1616486506648-12b32be638b9?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1616137148650-4aa7b11e9518?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1616486506434-7b3453c2f52f?auto=format&fit=crop&w=600&q=80"
+      "/lovable-uploads/f99c3da1-0d31-4847-bf6e-9dceb62e04cf.png",
+      "/lovable-uploads/ff4c739d-831c-416e-b549-a9e950b19d1e.png",
+      "/lovable-uploads/72e5a038-d2d6-454b-840c-26632e703a33.png",
+      "/lovable-uploads/70e09526-27d3-4283-9db4-9ce23544f584.png",
+      "/lovable-uploads/060beaa6-a0c1-4baf-b153-2aded1afc8c2.png",
+      "/lovable-uploads/9a5eae0d-76dd-43d2-b726-5ae320658b24.png",
+      "/lovable-uploads/0187c96c-d581-46c9-b7b4-4c81358e43b6.png",
+      "/lovable-uploads/70897698-728a-49bc-9b10-137bbe42cc4f.png",
+      "/lovable-uploads/4e7b1b91-83c4-4841-ba5c-5f3d8700c358.png"
     ]
   },
   "modern-functionality": {
