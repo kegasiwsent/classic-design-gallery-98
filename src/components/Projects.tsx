@@ -22,6 +22,7 @@ const Projects = () => {
       { id: "space-optimization", image: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=600&q=80", category: "Wardrobe Designs", title: "Space Optimization", description: "Maximizing storage with thoughtfully designed wardrobe solutions." },
       { id: "family-gatherings", image: "https://images.unsplash.com/photo-1603512500383-e0d26e33d7fc?auto=format&fit=crop&w=600&q=80", category: "Dining Room", title: "Family Gatherings", description: "Creating spaces that bring families together over meals and conversations." },
       { id: "urban-retreat", image: "https://images.unsplash.com/photo-1600607687644-c7f34b5f4f1b?auto=format&fit=crop&w=600&q=80", category: "Living Room", title: "Urban Retreat", description: "Transforming living spaces into comfortable urban sanctuaries." },
+      { id: "logic-factory", image: "/lovable-uploads/cdfd3545-f45d-4f9a-9e6a-3844122e5cb2.png", category: "Office", title: "Logic Factory", description: "Modern office interior design featuring innovative branding elements and functional workspace solutions in Ahmedabad." },
       { id: "sk-mishra", image: "/lovable-uploads/e59cef9a-5949-44aa-ba5b-7778c8fc62d2.png", category: "Architecture", title: "SK Mishra", description: "Contemporary architectural design featuring elegant modern aesthetics with functional living spaces." },
     ],
     residential: [
@@ -31,7 +32,7 @@ const Projects = () => {
     ],
     office: [
       { id: "productive-environment", image: "/lovable-uploads/b30960a1-e90c-44f3-9a65-4d27d8d39085.png", category: "Office Space", title: "Eternal Office Space", description: "Modern corporate office design with innovative layouts and thoughtful branding elements." },
-      { id: "first-impressions", image: "https://images.unsplash.com/photo-1600508774634-4e11d34730e2?auto=format&fit=crop&w=600&q=80", category: "Reception Area", title: "First Impressions", description: "Creating inviting reception areas that leave lasting impressions." },
+      { id: "logic-factory", image: "/lovable-uploads/cdfd3545-f45d-4f9a-9e6a-3844122e5cb2.png", category: "Office", title: "Logic Factory", description: "Modern office interior design featuring innovative branding elements and functional workspace solutions in Ahmedabad." },
     ],
     architecture: [
       { id: "sk-mishra", image: "/lovable-uploads/e59cef9a-5949-44aa-ba5b-7778c8fc62d2.png", category: "Architecture", title: "SK Mishra", description: "Contemporary architectural design featuring elegant modern aesthetics with functional living spaces." },

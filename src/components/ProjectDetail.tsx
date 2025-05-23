@@ -122,18 +122,21 @@ const projectsData = {
       "/lovable-uploads/60a896e8-2e9a-4e73-adcf-b7b0be683a6e.png"
     ]
   },
-  "first-impressions": {
-    title: "First Impressions",
-    category: "Reception Area",
-    description: "Creating inviting reception areas that leave lasting impressions. The design focuses on brand identity, visitor comfort, and efficient space utilization to create a memorable first touchpoint for clients and guests.",
-    client: "Corporate Headquarters",
-    location: "Denver, CO",
-    year: "2022",
-    mainImage: "https://images.unsplash.com/photo-1600508774634-4e11d34730e2?auto=format&fit=crop&w=1200&q=80",
+  "logic-factory": {
+    title: "Logic Factory",
+    category: "Office",
+    description: "Modern office interior design featuring innovative branding elements and functional workspace solutions. This project showcases contemporary corporate aesthetics with attention to detail in creating a productive and visually appealing environment.",
+    client: "Logic Factory",
+    location: "Ahmedabad, India",
+    year: "2024",
+    mainImage: "/lovable-uploads/cdfd3545-f45d-4f9a-9e6a-3844122e5cb2.png",
     galleryImages: [
-      "https://images.unsplash.com/photo-1600508774634-4e11d34730e2?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1564069114553-7215e1ff1890?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1577992443062-54883f8e95c3?auto=format&fit=crop&w=600&q=80"
+      "/lovable-uploads/cdfd3545-f45d-4f9a-9e6a-3844122e5cb2.png",
+      "/lovable-uploads/08006506-e6a4-4304-a23e-4b51c4b25501.png",
+      "/lovable-uploads/b2eccccf-a65b-42ee-bef6-c17d414484ab.png",
+      "/lovable-uploads/0c6bdaef-2ca6-4178-9676-3a5eaac71cac.png",
+      "/lovable-uploads/03da9f3e-a88f-433e-9db8-05851506f03c.png",
+      "/lovable-uploads/eb2ea9df-b163-4c09-993c-90f3ff9aaeb7.png"
     ]
   },
   "sk-mishra": {
