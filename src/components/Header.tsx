@@ -14,7 +14,7 @@ const Header = () => {
           <img 
             alt="JB Design Logo" 
             src="/lovable-uploads/172a6183-431f-48c7-a892-6f5a6858717c.png" 
-            className="h-16 object-contain hover:scale-105 transition-all duration-300 animate-fade-in"
+            className="h-20 md:h-24 object-contain hover:scale-105 transition-all duration-300 animate-fade-in"
           />
         </div>
 
