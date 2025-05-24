@@ -1,4 +1,3 @@
-
 import { useState, lazy, Suspense } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
@@ -23,8 +22,6 @@ const Projects = () => {
       { id: "elegant-lighting", image: "/lovable-uploads/f99c3da1-0d31-4847-bf6e-9dceb62e04cf.png", category: "Residential Interior", title: "Project 2", description: "Contemporary home interior design in Ahmedabad featuring stylish spaces with detailed woodwork and elegant lighting solutions." },
       { id: "modern-functionality", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80", category: "Kitchen Designs", title: "Modern Functionality", description: "Efficient kitchen layouts combining style with practical functionality." },
       { id: "space-optimization", image: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=600&q=80", category: "Wardrobe Designs", title: "Space Optimization", description: "Maximizing storage with thoughtfully designed wardrobe solutions." },
-      { id: "family-gatherings", image: "https://images.unsplash.com/photo-1603512500383-e0d26e33d7fc?auto=format&fit=crop&w=600&q=80", category: "Dining Room", title: "Family Gatherings", description: "Creating spaces that bring families together over meals and conversations." },
-      { id: "urban-retreat", image: "https://images.unsplash.com/photo-1600607687644-c7f34b5f4f1b?auto=format&fit=crop&w=600&q=80", category: "Living Room", title: "Urban Retreat", description: "Transforming living spaces into comfortable urban sanctuaries." },
       { id: "logic-factory", image: "/lovable-uploads/cdfd3545-f45d-4f9a-9e6a-3844122e5cb2.png", category: "Office", title: "Logic Factory", description: "Modern office interior design featuring innovative branding elements and functional workspace solutions in Ahmedabad." },
       { id: "sk-mishra", image: "/lovable-uploads/e59cef9a-5949-44aa-ba5b-7778c8fc62d2.png", category: "Architecture", title: "SK Mishra", description: "Contemporary architectural design featuring elegant modern aesthetics with functional living spaces." },
     ],
