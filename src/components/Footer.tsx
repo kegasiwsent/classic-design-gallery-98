@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -8,7 +7,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="h-8 w-8 rounded-full bg-primary"></div>
+              <img 
+                src="/lovable-uploads/c6d08345-b1f4-4e83-8953-55f48c047d17.png" 
+                alt="JB Design Logo" 
+                className="h-8 w-8 object-contain"
+              />
               <span className="font-serif text-xl font-semibold">JB DESIGN</span>
             </div>
             <p className="text-white/70 text-sm mb-6">
