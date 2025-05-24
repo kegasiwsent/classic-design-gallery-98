@@ -8,9 +8,10 @@ interface ServiceCategoryProps {
   title: string;
   description: string;
   image: string;
+  detailedDescription?: string;
 }
 
-const ServiceCategory = ({ title, description, image }: ServiceCategoryProps) => {
+const ServiceCategory = ({ title, description, image, detailedDescription }: ServiceCategoryProps) => {
   return (
     <Card className="overflow-hidden border-none rounded-lg shadow-lg hover:shadow-xl transition-all group">
       <div className="aspect-[4/3] relative">
@@ -23,7 +24,12 @@ const ServiceCategory = ({ title, description, image }: ServiceCategoryProps) =>
       </div>
       <CardContent className="p-6 bg-gradient-to-br from-gray-lightest to-white border-l-2 border-blue-medium">
         <h3 className="font-serif text-xl font-semibold mb-2 text-blue-navy">{title}</h3>
-        <p className="text-gray-medium text-sm">{description}</p>
+        <p className="text-gray-medium text-sm mb-3">{description}</p>
+        {detailedDescription && (
+          <div className="text-gray-600 text-xs leading-relaxed">
+            <p>{detailedDescription}</p>
+          </div>
+        )}
       </CardContent>
     </Card>
   );
@@ -44,32 +50,37 @@ const ServiceCategories = () => {
     {
       title: "Home Interior",
       description: "Functional kitchen, wardrobe and storage solutions",
-      image: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=600&q=80",
-      type: "interior-design"
+      image: "/lovable-uploads/148ab79d-eedb-454e-bf00-64673bd15ba6.png",
+      type: "interior-design",
+      detailedDescription: "The art of home interior design includes four important pillars like concept development, thorough communication with the client, planning, and execution of works. Personal preferences of the client, professional experience, and our innate talent help us to provide the best blueprint. We create a vibrant visual layout before going ahead with the real transformation of space and show you it as a 3D model. Our technical knowledge, experience, and teamwork make the plan become your reality. All this aside, we feel that your vision of how your home should be is more crucial than anything else. We work together with you and design your home according to your lifestyle."
     },
     {
       title: "Office Interior",
-      description: "Turnkey interior solutions for your home",
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80",
-      type: "interior-design"
+      description: "Turnkey interior solutions for your office",
+      image: "/lovable-uploads/2a9eabe4-f735-4784-ab2d-355ce5ed9873.png",
+      type: "interior-design",
+      detailedDescription: "We know the value of space and space planning, that is why our office designs have become an area of great importance and consideration in an age where a major part of the day is spent in the office space. The design not only portrays what your work stands for but also determines the productivity of your employees. When you invest in professional office design, both form and function will come into play. Once in a lifetime investment in your office space makes sure that you always have consistent and bountiful returns in terms of productivity and achievement of the business goals."
     },
     {
       title: "Hotel Interior",
       description: "Tailored interiors that redefine elegance",
-      image: "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=600&q=80",
-      type: "interior-design"
+      image: "/lovable-uploads/6d4f8dbb-1599-4d5b-b116-200962f4e50a.png",
+      type: "interior-design",
+      detailedDescription: "Nowadays the consumer is getting more and more demanding for lifestyle luxury; we collaborate with many hoteliers to build designs that appeal to the senses of the globe-trotting Indian and international clients. We offer interior design for premium hotels making sure to create stylized designs with the best in quality material for delivering the luxurious experience that compels the consumer to return to the hotel. As an interior designer for hotels, the focus is on building an indulging experience for the guests."
     },
     {
       title: "Home Renovation",
       description: "Expert solutions to upgrade your home",
-      image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80",
-      type: "interior-design"
+      image: "/lovable-uploads/4466c9a4-d56f-4c26-a1eb-34933612b2d9.png",
+      type: "interior-design",
+      detailedDescription: "Making a bespoke life experience is an extremely important and tough task. But maintaining the same through the long years while saving and emanating the essence of freshness shows dexterity in itself. Our home renovation services focus on ensuring that your home remains the same as you always wanted it to be. Our skilled partners and their associates make sure that every inch of your home is as fresh as it was on the day it was first completed. Being a consultation centric firm we now rarely need to delve into the execution, but with our competent partners, we ensure that we deliver you what we have promised."
     },
     {
       title: "Restaurant Interior",
       description: "Creative spaces for dining and entertainment",
-      image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=600&q=80",
-      type: "interior-design"
+      image: "/lovable-uploads/f0ed2c49-48e8-4ca8-862e-9c61e3162827.png",
+      type: "interior-design",
+      detailedDescription: "Creating an amazing interior design is anything but simple. There are thousands of factors to juggle – What will your restaurant or cafe's style be like? How can you make the interior as beautiful and decorative as possible without disrupting the staff's workflow? Will safety regulations even allow your grandiose designs to take form? When you think about just how much goes into the design of the perfect restaurant interior, you'll gain a whole new appreciation for these wondrously designed interior spaces. Our restaurant concept development not only involves restaurant design but also includes market and competitive research, emerging and fading trends to design a space that helps your customers to enjoy your food to the fullest."
     },
     {
       title: "Design Consultation",
@@ -157,6 +168,7 @@ const ServiceCategories = () => {
                 title={service.title}
                 description={service.description}
                 image={service.image}
+                detailedDescription={service.detailedDescription}
               />
             </Link>
           ))}
