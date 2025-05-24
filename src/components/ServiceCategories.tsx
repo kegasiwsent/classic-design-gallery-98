@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
@@ -101,21 +100,21 @@ const ServiceCategories = () => {
       type: "vastu-shastra"
     },
     {
-      title: "Modern Kitchen Designs",
-      description: "Functional and stylish kitchen solutions for modern homes",
-      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80",
+      title: "Contemporary Kitchen with Artistic Elements",
+      description: "Modern kitchen with decorative wall art and sleek design elements",
+      image: "/lovable-uploads/209fa91f-67f6-49b6-84ec-7a6fb826fc56.png",
       type: "kitchen"
     },
     {
-      title: "Kitchen Remodeling",
-      description: "Transform your outdated kitchen with our expert remodeling services",
-      image: "https://images.unsplash.com/photo-1586208958839-06c17cacdf08?auto=format&fit=crop&w=600&q=80",
+      title: "Modern L-shaped Kitchen with Premium Finishes",
+      description: "Elegant L-shaped kitchen with wood finish and contemporary lighting",
+      image: "/lovable-uploads/277de05e-7d10-4315-a3bc-bd37be4f14b8.png",
       type: "kitchen"
     },
     {
-      title: "Custom Kitchen Cabinets",
-      description: "Personalized storage solutions designed for your unique kitchen space",
-      image: "https://images.unsplash.com/photo-1604709177225-055f99402ea3?auto=format&fit=crop&w=600&q=80",
+      title: "Colorful Modular Kitchen Design",
+      description: "Vibrant blue kitchen with modern appliances and efficient storage",
+      image: "/lovable-uploads/64b70b14-b9b1-420c-891a-6d06a398b333.png",
       type: "kitchen"
     }
   ];
