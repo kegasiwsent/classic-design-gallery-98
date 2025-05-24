@@ -47,19 +47,19 @@ const KitchenDesign = () => {
 
   const kitchenDesigns = [
     {
-      title: "A kitchen with a breakfast counter and display shelves",
-      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80",
-      description: "Modern kitchen with elegant storage solutions and breakfast counter"
+      title: "Contemporary Kitchen with Artistic Elements",
+      image: "/lovable-uploads/209fa91f-67f6-49b6-84ec-7a6fb826fc56.png",
+      description: "Modern kitchen with decorative wall art and sleek design elements"
     },
     {
-      title: "An L-shaped kitchen with base and overhead cabinets",
-      image: "https://images.unsplash.com/photo-1586208958839-06c17cacdf08?auto=format&fit=crop&w=600&q=80",
-      description: "Maximize corner spaces with our L-shaped kitchen designs"
+      title: "Modern L-shaped Kitchen with Premium Finishes",
+      image: "/lovable-uploads/277de05e-7d10-4315-a3bc-bd37be4f14b8.png",
+      description: "Elegant L-shaped kitchen with wood finish and contemporary lighting"
     },
     {
-      title: "A U-shaped kitchen with a hob and chimney unit",
-      image: "https://images.unsplash.com/photo-1604709177225-055f99402ea3?auto=format&fit=crop&w=600&q=80",
-      description: "Complete cooking solution with premium appliances and ample workspace"
+      title: "Colorful Modular Kitchen Design",
+      image: "/lovable-uploads/64b70b14-b9b1-420c-891a-6d06a398b333.png",
+      description: "Vibrant blue kitchen with modern appliances and efficient storage"
     }
   ];
 
@@ -88,10 +88,7 @@ const KitchenDesign = () => {
         "Quality control",
         "Timely delivery"
       ],
-      images: [
-        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=600&q=80",
-      ]
+      images: []
     },
     {
       id: "furniture",
@@ -104,10 +101,7 @@ const KitchenDesign = () => {
         "Study & office furniture",
         "Custom seating"
       ],
-      images: [
-        "https://images.unsplash.com/photo-1538688423619-a81d3f23454b?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=600&q=80",
-      ]
+      images: []
     },
     {
       id: "ceiling",
@@ -120,10 +114,7 @@ const KitchenDesign = () => {
         "Wooden ceiling",
         "Accent lighting"
       ],
-      images: [
-        "https://images.unsplash.com/photo-1616137148650-4aa7b11e9518?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1603712725038-e9334ae8f39f?auto=format&fit=crop&w=600&q=80",
-      ]
+      images: []
     },
     {
       id: "electrical",
@@ -136,10 +127,7 @@ const KitchenDesign = () => {
         "Safety features",
         "Energy efficiency"
       ],
-      images: [
-        "https://images.unsplash.com/photo-1555636222-cae831e670b3?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=600&q=80",
-      ]
+      images: []
     },
     {
       id: "colour",
@@ -152,10 +140,7 @@ const KitchenDesign = () => {
         "Specialty finishes",
         "Eco-friendly options"
       ],
-      images: [
-        "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1562184647-e30d700ec772?auto=format&fit=crop&w=600&q=80",
-      ]
+      images: []
     },
     {
       id: "glass",
@@ -168,10 +153,7 @@ const KitchenDesign = () => {
         "Glass railings",
         "Decorative glass"
       ],
-      images: [
-        "https://images.unsplash.com/photo-1600607686547-6718d14a2d57?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1600566752355-fb1fa0a0fe5c?auto=format&fit=crop&w=600&q=80",
-      ]
+      images: []
     },
     {
       id: "civil",
@@ -184,10 +166,7 @@ const KitchenDesign = () => {
         "Plumbing work",
         "Foundation repairs"
       ],
-      images: [
-        "https://images.unsplash.com/photo-1621510456681-2330135e5871?auto=format&fit=crop&w=600&q=80",
-        "https://images.unsplash.com/photo-1621886292650-520eb078c187?auto=format&fit=crop&w=600&q=80",
-      ]
+      images: []
     }
   ];
 
@@ -196,14 +175,14 @@ const KitchenDesign = () => {
       <Header />
       <main className="pt-24">
         {/* Hero Section */}
-        <section className="bg-interior-charcoal py-20 text-white">
+        <section className="bg-white py-20 text-interior-charcoal">
           <div className="container mx-auto px-4">
             <div className="flex flex-col items-center text-center">
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 Smart Modular Kitchen Designs
               </h1>
               <div className="w-24 h-1 bg-interior-gold mb-8"></div>
-              <p className="text-white/80 max-w-2xl text-lg mb-12">
+              <p className="text-gray-600 max-w-2xl text-lg mb-12">
                 Transform your kitchen into a beautiful and functional space with our expert design solutions
               </p>
               <Button 
@@ -282,7 +261,7 @@ const KitchenDesign = () => {
               
               {serviceCategories.map((category) => (
                 <TabsContent key={category.id} value={category.id} className="mt-0">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                  <div className={`grid grid-cols-1 ${category.images.length > 0 ? 'lg:grid-cols-2' : ''} gap-12 items-center`}>
                     <div className="space-y-6">
                       <h3 className="font-serif text-3xl font-bold">{category.title}</h3>
                       <p className="text-gray-600">{category.description}</p>
@@ -309,17 +288,19 @@ const KitchenDesign = () => {
                       </div>
                     </div>
                     
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {category.images.map((image, i) => (
-                        <div key={i} className="aspect-[4/3] overflow-hidden rounded-lg shadow-md">
-                          <img 
-                            src={image} 
-                            alt={`${category.title} example ${i+1}`}
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                          />
-                        </div>
-                      ))}
-                    </div>
+                    {category.images.length > 0 && (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {category.images.map((image, i) => (
+                          <div key={i} className="aspect-[4/3] overflow-hidden rounded-lg shadow-md">
+                            <img 
+                              src={image} 
+                              alt={`${category.title} example ${i+1}`}
+                              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </TabsContent>
               ))}
