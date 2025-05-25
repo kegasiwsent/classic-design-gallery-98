@@ -8,10 +8,7 @@ const Footer = () => {
               <img src="/lovable-uploads/c6d08345-b1f4-4e83-8953-55f48c047d17.png" alt="JB Design Logo" className="h-40 w-40 object-contain" />
               <span className="font-serif text-xl font-semibold"></span>
             </div>
-            <p className="text-white/70 text-sm mb-6">
-              Creating beautiful, functional spaces that reflect your personality 
-              and meet your needs is what we do best.
-            </p>
+            <p className="text-white/70 mb-6 text-lg">The Philosophical Study Of Beauty And Art </p>
           </div>
           
           <div>
