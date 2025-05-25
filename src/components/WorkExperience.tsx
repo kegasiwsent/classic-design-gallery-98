@@ -1,4 +1,5 @@
 
+
 import { useState, useEffect, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -78,13 +79,13 @@ const WorkExperience = () => {
             <div className="mt-8 grid grid-cols-2 gap-4">
               <div className="bg-interior-navy/5 p-6 rounded-lg text-center">
                 <div className="font-bold text-3xl md:text-4xl text-blue-dark mb-2">
-                  <CountUpAnimation targetValue={400} />+
+                  <CountUpAnimation targetValue={270} />+
                 </div>
                 <p className="text-gray-medium">Projects Completed</p>
               </div>
               <div className="bg-interior-navy/5 p-6 rounded-lg text-center">
                 <div className="font-bold text-3xl md:text-4xl text-blue-dark mb-2">
-                  <CountUpAnimation targetValue={350} />+
+                  <CountUpAnimation targetValue={235} />+
                 </div>
                 <p className="text-gray-medium">Happy Clients</p>
               </div>
@@ -97,3 +98,4 @@ const WorkExperience = () => {
 };
 
 export default WorkExperience;
+
