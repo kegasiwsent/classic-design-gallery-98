@@ -2,8 +2,12 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { MapPin } from "lucide-react";
 
 const About = () => {
+  const studioAddress = "B123 Gopinath Industrial Hub Durganagar Near Punitnagar Railway Crossing Vatva Ahmedabad Gujarat India 380050";
+  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(studioAddress)}`;
+
   return (
     <div className="min-h-screen flex flex-col relative">
       <Header />
@@ -63,6 +67,36 @@ const About = () => {
                 core of everything we do at JB Design.</p>
               </div>
             </div>
+
+            {/* Studio Address Section */}
+            <section className="py-16 bg-gray-lightest rounded-lg">
+              <div className="text-center">
+                <h2 className="font-serif text-3xl font-bold mb-8 text-blue-navy">
+                  Studio Address
+                </h2>
+                <div className="max-w-2xl mx-auto">
+                  <a 
+                    href={googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-start gap-3 p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer group"
+                  >
+                    <MapPin className="text-blue-medium mt-1 flex-shrink-0 group-hover:text-blue-dark transition-colors" size={24} />
+                    <div className="text-left">
+                      <p className="text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors">
+                        B123 Gopinath Industrial Hub Durganagar<br />
+                        Near Punitnagar Railway Crossing<br />
+                        Vatva Ahmedabad Gujarat India<br />
+                        Pincode: 380050
+                      </p>
+                      <p className="text-blue-medium text-sm mt-2 group-hover:text-blue-dark transition-colors">
+                        Click to view on Google Maps
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </main>
