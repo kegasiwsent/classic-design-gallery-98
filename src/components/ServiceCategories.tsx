@@ -27,7 +27,7 @@ const ServiceCategory = ({
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
       <CardContent className="p-6 bg-gradient-to-br from-gray-lightest to-white border-l-2 border-blue-medium">
-        <h3 className="font-serif text-xl font-semibold mb-2 text-blue-navy">{title}</h3>
+        <h3 className="font-serif text-xl font-semibold mb-2 text-blue-navy uppercase">{title}</h3>
         <p className="text-gray-medium text-sm mb-3 font-normal">{description}</p>
         {detailedDescription && (
           <div className="text-gray-600 text-xs leading-relaxed">
