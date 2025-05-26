@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
@@ -17,77 +18,77 @@ const Projects = () => {
       id: "contemporary-comfort",
       image: "/lovable-uploads/f7eb8f22-a7f4-4f2c-ac7a-92f8e9bfa0a7.png",
       category: "Residential Interior",
-      title: "Project 1",
-      description: "A modern approach to residential interior design featuring elegant spaces with refined finishes."
+      title: "RESIDENTIAL PROJECT",
+      description: "A modern approach to residential interior design featuring elegant spaces with refined finishes in Ahmedabad."
     }, {
       id: "elegant-lighting",
       image: "/lovable-uploads/f99c3da1-0d31-4847-bf6e-9dceb62e04cf.png",
       category: "Residential Interior",
-      title: "Project 2",
+      title: "RESIDENTIAL PROJECT",
       description: "Contemporary home interior design in Ahmedabad featuring stylish spaces with detailed woodwork and elegant lighting solutions."
     }, {
       id: "modern-functionality",
       image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80",
       category: "Kitchen Designs",
       title: "Modern Functionality",
-      description: "Efficient kitchen layouts combining style with practical functionality."
+      description: "Efficient kitchen layouts combining style with practical functionality in Ahmedabad."
     }, {
       id: "space-optimization",
       image: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=600&q=80",
       category: "Wardrobe Designs",
       title: "Space Optimization",
-      description: "Maximizing storage with thoughtfully designed wardrobe solutions."
+      description: "Maximizing storage with thoughtfully designed wardrobe solutions in Ahmedabad."
     }, {
       id: "logic-factory",
       image: "/lovable-uploads/cdfd3545-f45d-4f9a-9e6a-3844122e5cb2.png",
       category: "Office",
-      title: "Logic Factory",
+      title: "OFFICE SPACE",
       description: "Modern office interior design featuring innovative branding elements and functional workspace solutions in Ahmedabad."
     }, {
       id: "sk-mishra",
       image: "/lovable-uploads/e59cef9a-5949-44aa-ba5b-7778c8fc62d2.png",
       category: "Architecture",
-      title: "SK Mishra",
-      description: "Contemporary architectural design featuring elegant modern aesthetics with functional living spaces."
+      title: "ARCHITECTURE PROJECT",
+      description: "Contemporary architectural design featuring elegant modern aesthetics with functional living spaces in Ahmedabad."
     }],
     residential: [{
       id: "contemporary-comfort",
       image: "/lovable-uploads/f7eb8f22-a7f4-4f2c-ac7a-92f8e9bfa0a7.png",
       category: "Residential Interior",
-      title: "Project 1",
-      description: "A modern approach to residential interior design featuring elegant spaces with refined finishes."
+      title: "RESIDENTIAL PROJECT",
+      description: "A modern approach to residential interior design featuring elegant spaces with refined finishes in Ahmedabad."
     }, {
       id: "elegant-lighting",
       image: "/lovable-uploads/f99c3da1-0d31-4847-bf6e-9dceb62e04cf.png",
       category: "Residential Interior",
-      title: "Project 2",
+      title: "RESIDENTIAL PROJECT",
       description: "Contemporary home interior design in Ahmedabad featuring stylish spaces with detailed woodwork and elegant lighting solutions."
     }, {
       id: "modern-functionality",
       image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80",
       category: "Kitchen Designs",
       title: "Modern Functionality",
-      description: "Efficient kitchen layouts combining style with practical functionality."
+      description: "Efficient kitchen layouts combining style with practical functionality in Ahmedabad."
     }],
     office: [{
       id: "productive-environment",
       image: "/lovable-uploads/b30960a1-e90c-44f3-9a65-4d27d8d39085.png",
       category: "Office Space",
-      title: "Eternal Office Space",
-      description: "Modern corporate office design with innovative layouts and thoughtful branding elements."
+      title: "OFFICE SPACE",
+      description: "Modern corporate office design with innovative layouts and thoughtful branding elements in Ahmedabad."
     }, {
       id: "logic-factory",
       image: "/lovable-uploads/cdfd3545-f45d-4f9a-9e6a-3844122e5cb2.png",
       category: "Office",
-      title: "Logic Factory",
+      title: "OFFICE SPACE",
       description: "Modern office interior design featuring innovative branding elements and functional workspace solutions in Ahmedabad."
     }],
     architecture: [{
       id: "sk-mishra",
       image: "/lovable-uploads/e59cef9a-5949-44aa-ba5b-7778c8fc62d2.png",
       category: "Architecture",
-      title: "SK Mishra",
-      description: "Contemporary architectural design featuring elegant modern aesthetics with functional living spaces."
+      title: "ARCHITECTURE PROJECT",
+      description: "Contemporary architectural design featuring elegant modern aesthetics with functional living spaces in Ahmedabad."
     }]
   };
   return <section className="py-24 bg-interior-charcoal text-white" id="projects">
