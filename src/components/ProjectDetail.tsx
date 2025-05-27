@@ -8,11 +8,11 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 // This is just mock data - in a real app this would come from an API or database
 const projectsData = {
   "contemporary-comfort": {
-    title: "Project 1",
+    title: "Project",
     category: "Residential Interior",
     description: "A modern approach to residential interior design featuring elegant spaces with refined finishes. This project incorporates contemporary elements with functional layout planning, custom furniture, and thoughtful lighting solutions to create a sophisticated yet comfortable living environment.",
-    client: "Private Residence",
-    location: "Mumbai, India",
+    client: "Private",
+    location: "Ahmedabad, Gujarat",
     year: "2023",
     mainImage: "/lovable-uploads/f7eb8f22-a7f4-4f2c-ac7a-92f8e9bfa0a7.png",
     galleryImages: [
@@ -28,11 +28,11 @@ const projectsData = {
     ]
   },
   "elegant-lighting": {
-    title: "Project 2",
+    title: "Project",
     category: "Residential Interior",
     description: "Contemporary home interior design in Ahmedabad featuring stylish spaces with detailed woodwork and elegant lighting solutions. This residential project balances modern aesthetics with functional living spaces, creating a comfortable and sophisticated home environment.",
-    client: "Private Residence",
-    location: "Ahmedabad, India",
+    client: "Private",
+    location: "Ahmedabad, Gujarat",
     year: "2024",
     mainImage: "/lovable-uploads/f99c3da1-0d31-4847-bf6e-9dceb62e04cf.png",
     galleryImages: [
@@ -47,68 +47,12 @@ const projectsData = {
       "/lovable-uploads/4e7b1b91-83c4-4841-ba5c-5f3d8700c358.png"
     ]
   },
-  "modern-functionality": {
-    title: "Modern Functionality",
-    category: "Kitchen Designs",
-    description: "Efficient kitchen layouts combining style with practical functionality. This kitchen renovation focused on maximizing space efficiency while incorporating high-end appliances and premium materials for a sophisticated cooking environment.",
-    client: "Family Home",
-    location: "San Francisco, CA",
-    year: "2023",
-    mainImage: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1600607686527-e2f4df1a05ec?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1600607687920-4e4a59aaf650?auto=format&fit=crop&w=600&q=80"
-    ]
-  },
-  "space-optimization": {
-    title: "Space Optimization",
-    category: "Wardrobe Designs",
-    description: "Maximizing storage with thoughtfully designed wardrobe solutions. Custom cabinetry and innovative storage systems create organization while complementing the overall design aesthetic of the room.",
-    client: "Urban Apartment",
-    location: "Boston, MA",
-    year: "2023",
-    mainImage: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1596079890744-c1a0462d0975?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1595526051245-4506e0005bd0?auto=format&fit=crop&w=600&q=80"
-    ]
-  },
-  "family-gatherings": {
-    title: "Family Gatherings",
-    category: "Dining Room",
-    description: "Creating spaces that bring families together over meals and conversations. This dining room redesign focuses on comfort, acoustics, and creating a welcoming atmosphere for entertaining guests and everyday family meals.",
-    client: "Suburban Home",
-    location: "Seattle, WA",
-    year: "2022",
-    mainImage: "https://images.unsplash.com/photo-1603512500383-e0d26e33d7fc?auto=format&fit=crop&w=1200&q=80",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1603512500383-e0d26e33d7fc?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1604578762246-71185238446c?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=80"
-    ]
-  },
-  "urban-retreat": {
-    title: "Urban Retreat",
-    category: "Living Room",
-    description: "Transforming living spaces into comfortable urban sanctuaries. This project creates a harmonious balance between contemporary design and comfortable livability, with custom furniture pieces and a cohesive material palette.",
-    client: "Downtown Loft",
-    location: "Portland, OR",
-    year: "2023",
-    mainImage: "https://images.unsplash.com/photo-1600607687644-c7f34b5f4f1b?auto=format&fit=crop&w=1200&q=80",
-    galleryImages: [
-      "https://images.unsplash.com/photo-1600607687920-4e4a59aaf650?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1600607687166-b921078dca55?auto=format&fit=crop&w=600&q=80"
-    ]
-  },
   "productive-environment": {
-    title: "Eternal Office Space",
+    title: "Office Space",
     category: "Office Space",
     description: "A modern corporate workspace design featuring innovative layouts, premium materials, and thoughtful branding elements. This office project combines functionality with aesthetic excellence, creating a productive and inspiring work environment.",
-    client: "Eternal Web Pvt. Ltd.",
-    location: "Mumbai, India",
+    client: "Private",
+    location: "Ahmedabad, Gujarat",
     year: "2024",
     mainImage: "/lovable-uploads/b30960a1-e90c-44f3-9a65-4d27d8d39085.png",
     galleryImages: [
@@ -126,8 +70,8 @@ const projectsData = {
     title: "Logic Factory",
     category: "Office",
     description: "Modern office interior design featuring innovative branding elements and functional workspace solutions. This project showcases contemporary corporate aesthetics with attention to detail in creating a productive and visually appealing environment.",
-    client: "Logic Factory",
-    location: "Ahmedabad, India",
+    client: "Private",
+    location: "Ahmedabad, Gujarat",
     year: "2024",
     mainImage: "/lovable-uploads/cdfd3545-f45d-4f9a-9e6a-3844122e5cb2.png",
     galleryImages: [
@@ -152,6 +96,19 @@ const projectsData = {
       "/lovable-uploads/6b6e6aa1-c1a0-4a58-8e67-206abd94be9c.png",
       "/lovable-uploads/8ebcfa03-3693-4995-9943-6acd25347333.png",
       "/lovable-uploads/91d4631a-5383-447f-95a1-ef5211b94c0c.png"
+    ]
+  },
+  "architecture-project": {
+    title: "ARCHITECTURE PROJECT",
+    category: "Architecture",
+    description: "Contemporary residential architectural design featuring modern aesthetics with innovative structural elements. This project showcases excellent use of materials including brick and contemporary finishes, creating a harmonious blend of traditional and modern architectural styles.",
+    client: "Private",
+    location: "Ahmedabad, Gujarat",
+    year: "2024",
+    mainImage: "/lovable-uploads/ce00e14a-8d46-4ff9-9afb-cff44dfa7962.png",
+    galleryImages: [
+      "/lovable-uploads/ce00e14a-8d46-4ff9-9afb-cff44dfa7962.png",
+      "/lovable-uploads/df1e5540-1378-4f90-871c-b1f6edf966e3.png"
     ]
   }
 };
