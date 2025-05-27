@@ -3,7 +3,6 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Link } from "react-router-dom";
 import { Images } from "lucide-react";
@@ -23,19 +22,20 @@ interface OngoingProject {
 
 const ongoingProjectsData: OngoingProject[] = [
   {
-    id: "urban-apartment",
-    name: "Urban Apartment Redesign",
-    location: "Mumbai, Maharashtra",
-    type: "Residential - 3BHK",
-    progress: 75,
-    startDate: "Jan 10, 2025",
-    estimatedCompletion: "Jun 20, 2025",
-    image: "https://images.unsplash.com/photo-1615729947596-a598e5de0ab3?auto=format&fit=crop&w=600&q=80",
+    id: "ahmedabad-project",
+    name: "Ongoing Project",
+    location: "Ahmedabad, Gujarat",
+    type: "Residential - 2BHK",
+    progress: 25,
+    startDate: "Feb 01, 2025",
+    estimatedCompletion: "Aug 15, 2025",
+    image: "/lovable-uploads/beecc461-cf93-4386-b01b-ac0c5ba6c0ad.png",
     additionalImages: [
-      "https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1615876234886-fd9a39fda97f?auto=format&fit=crop&w=600&q=80"
+      "/lovable-uploads/eebc01af-5d56-4d66-a473-19b306bcf769.png",
+      "/lovable-uploads/7d22458a-9f3c-49b4-9c18-50df5fa6403c.png",
+      "/lovable-uploads/58d85787-f848-493d-8954-5a78c2394e16.png"
     ],
-    description: "This luxury apartment redesign features modern aesthetics with clean lines and a neutral color palette. Currently in the finishing stage with custom furniture installation and final lighting adjustments."
+    description: "Modern residential project in Ahmedabad featuring contemporary design elements and efficient space utilization. Currently in the initial construction phase with structural work and electrical installations underway."
   },
   {
     id: "riverside-office",
@@ -96,7 +96,6 @@ const OngoingProjects = () => {
               <TableHead>Location</TableHead>
               <TableHead>Type</TableHead>
               <TableHead>Progress</TableHead>
-              <TableHead>Timeline</TableHead>
               <TableHead>Gallery</TableHead>
             </TableRow>
           </TableHeader>
@@ -126,32 +125,6 @@ const OngoingProjects = () => {
                     <Progress value={project.progress} className="h-2 w-[100px]" />
                     <span className="text-xs font-medium">{project.progress}%</span>
                   </div>
-                </TableCell>
-                <TableCell>
-                  <Popover>
-                    <PopoverTrigger asChild>
-                      <button className="text-xs underline text-gray-600 hover:text-interior-gold">
-                        View Timeline
-                      </button>
-                    </PopoverTrigger>
-                    <PopoverContent className="w-80">
-                      <div className="space-y-2">
-                        <h4 className="font-medium">{project.name}</h4>
-                        <div className="grid grid-cols-2 gap-1 text-sm">
-                          <div className="text-gray-500">Start Date:</div>
-                          <div>{project.startDate}</div>
-                          <div className="text-gray-500">Estimated Completion:</div>
-                          <div>{project.estimatedCompletion}</div>
-                        </div>
-                        <Progress value={project.progress} className="h-2" />
-                        <div className="flex justify-between text-xs mt-1">
-                          <span>Start</span>
-                          <span>In Progress</span>
-                          <span>Complete</span>
-                        </div>
-                      </div>
-                    </PopoverContent>
-                  </Popover>
                 </TableCell>
                 <TableCell>
                   <Link 
