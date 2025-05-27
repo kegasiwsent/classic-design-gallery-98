@@ -1,3 +1,4 @@
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -8,14 +9,15 @@ const About = () => {
   const meetingAddress = "5B, New York corner, opp. Rajpath club, b/h. Kiran Motors, S.G Highway, Ahmedabad";
   const studioGoogleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(studioAddress)}`;
   const meetingGoogleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(meetingAddress)}`;
+
   return (
     <div className="min-h-screen flex flex-col relative">
       <Header />
       
-      <main className="pt-20 pb-24">
+      <main className="pt-32 pb-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12 mt-16">
+            <div className="text-center mb-12 mt-8">
               <h1 className="font-serif text-4xl md:text-5xl font-bold mb-8 text-blue-navy">
                 PASSIONATELY CREATING DESIGNER HOMES SINCE 2009
               </h1>

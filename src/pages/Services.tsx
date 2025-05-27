@@ -5,19 +5,22 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
 import KitchenPortfolio from "@/components/kitchen/KitchenPortfolio";
 import KitchenServices from "@/components/kitchen/KitchenServices";
+
 interface ServiceCategoryProps {
   title: string;
   description: string;
   image: string;
   detailedDescription?: string;
 }
+
 const ServiceCategory = ({
   title,
   description,
   image,
   detailedDescription
 }: ServiceCategoryProps) => {
-  return <Card className="overflow-hidden border-none rounded-lg shadow-lg hover:shadow-xl transition-all group">
+  return (
+    <Card className="overflow-hidden border-none rounded-lg shadow-lg hover:shadow-xl transition-all group">
       <div className="aspect-[4/3] relative">
         <img src={image} alt={title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -25,14 +28,19 @@ const ServiceCategory = ({
       <CardContent className="p-6 bg-gradient-to-br from-gray-lightest to-white border-l-2 border-blue-medium">
         <h3 className="font-serif text-xl font-semibold mb-2 text-blue-navy uppercase">{title}</h3>
         <p className="text-gray-medium text-sm mb-3 font-normal">{description}</p>
-        {detailedDescription && <div className="text-gray-600 text-xs leading-relaxed">
+        {detailedDescription && (
+          <div className="text-gray-600 text-xs leading-relaxed">
             <p className="text-justify">{detailedDescription}</p>
-          </div>}
+          </div>
+        )}
       </CardContent>
-    </Card>;
+    </Card>
+  );
 };
+
 const Services = () => {
   const [activeTab, setActiveTab] = useState("interior-design");
+
   const serviceTypes = [{
     id: "interior-design",
     label: "Interior Design"
@@ -112,31 +120,49 @@ const Services = () => {
     image: "/lovable-uploads/64b70b14-b9b1-420c-891a-6d06a398b333.png",
     type: "kitchen"
   }];
+
   const filteredServices = services.filter(service => service.type === activeTab);
-  return <div className="min-h-screen flex flex-col">
+
+  return (
+    <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="pt-20 pb-24">
+      <main className="pt-32 pb-24">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 mt-16">
-            <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-blue-navy"></h1>
+          <div className="text-center mb-16 mt-8">
+            <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-blue-navy">Our Services</h1>
             
             <p className="text-gray-medium max-w-3xl mx-auto text-lg">
-          </p>
+              Comprehensive interior design solutions tailored to your needs
+            </p>
           </div>
 
           <div className="flex justify-center mb-10">
             <Tabs defaultValue="interior-design" value={activeTab} onValueChange={setActiveTab} className="w-full max-w-4xl">
               <TabsList className="flex flex-wrap justify-center bg-gray-lightest p-2 rounded-md gap-2">
-                {serviceTypes.map(type => <TabsTrigger key={type.id} value={type.id} className="px-4 py-2 rounded data-[state=active]:bg-blue-medium data-[state=active]:text-white">
+                {serviceTypes.map(type => (
+                  <TabsTrigger 
+                    key={type.id} 
+                    value={type.id} 
+                    className="px-4 py-2 rounded data-[state=active]:bg-blue-medium data-[state=active]:text-white"
+                  >
                     {type.label}
-                  </TabsTrigger>)}
+                  </TabsTrigger>
+                ))}
               </TabsList>
             </Tabs>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-16">
-            {filteredServices.map((service, index) => <ServiceCategory key={index} title={service.title} description={service.description} image={service.image} detailedDescription={service.detailedDescription} />)}
+            {filteredServices.map((service, index) => (
+              <ServiceCategory 
+                key={index} 
+                title={service.title} 
+                description={service.description} 
+                image={service.image} 
+                detailedDescription={service.detailedDescription} 
+              />
+            ))}
           </div>
         </div>
 
@@ -148,6 +174,8 @@ const Services = () => {
       </main>
       
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default Services;
