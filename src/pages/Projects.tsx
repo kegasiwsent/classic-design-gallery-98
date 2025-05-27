@@ -1,4 +1,3 @@
-
 import { useState, lazy, Suspense } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
@@ -43,7 +42,7 @@ const Projects = () => {
   return (
     <>
       <Header />
-      <main className="pt-24">
+      <main className="pt-40">
         <div className="container mx-auto px-4 py-16">
           <div className="mb-16 text-center">
             <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4">
