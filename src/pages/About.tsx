@@ -2,20 +2,24 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { MapPin } from "lucide-react";
+
 const About = () => {
   const studioAddress = "B123 Gopinath Industrial Hub Durganagar Near Punitnagar Railway Crossing Vatva Ahmedabad Gujarat India 380050";
   const meetingAddress = "5B, New York corner, opp. Rajpath club, b/h. Kiran Motors, S.G Highway, Ahmedabad";
   const studioGoogleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(studioAddress)}`;
   const meetingGoogleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(meetingAddress)}`;
-  return <div className="min-h-screen flex flex-col relative">
+  return (
+    <div className="min-h-screen flex flex-col relative">
       <Header />
       
-      <main className="pt-40 pb-24">
+      <main className="pt-20 pb-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-center mb-8 text-blue-navy">
-              PASSIONATELY CREATING DESIGNER HOMES SINCE 2009
-            </h1>
+            <div className="text-center mb-12 mt-16">
+              <h1 className="font-serif text-4xl md:text-5xl font-bold mb-8 text-blue-navy">
+                PASSIONATELY CREATING DESIGNER HOMES SINCE 2009
+              </h1>
+            </div>
             
             <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
               <div className="w-full md:w-1/3 flex justify-center">
@@ -113,6 +117,8 @@ const About = () => {
       </main>
       
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default About;
