@@ -1,17 +1,13 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { MapPin } from "lucide-react";
-
 const About = () => {
   const studioAddress = "B123 Gopinath Industrial Hub Durganagar Near Punitnagar Railway Crossing Vatva Ahmedabad Gujarat India 380050";
   const meetingAddress = "5B, New York corner, opp. Rajpath club, b/h. Kiran Motors, S.G Highway, Ahmedabad";
   const studioGoogleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(studioAddress)}`;
   const meetingGoogleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(meetingAddress)}`;
-
-  return (
-    <div className="min-h-screen flex flex-col relative">
+  return <div className="min-h-screen flex flex-col relative">
       <Header />
       
       <main className="pt-40 pb-24">
@@ -34,13 +30,7 @@ const About = () => {
                   A man behind your dreams
                 </h2>
                 
-                <p className="text-gray-dark mb-6 leading-relaxed">
-                  JB Design is a leading bespoke luxury interior design firm, born out of a philosophy and 
-                  experience that has spanned 15 years of pan India presence. Founded by Bhrugesh Mewada, 
-                  we bring more than a decade of national design experience to the table. JB design's has 
-                  worked with more than 200 clients for different divisions such as Bungalows, Apartments, 
-                  Farmhouse, Resort, Showrooms.
-                </p>
+                <p className="text-gray-dark mb-6 leading-relaxed">JB Design is a leading bespoke luxury interior design firm, born out of a philosophy and experience that has spanned 16 years of pan India presence. Founded by Bhrugesh Mewada, we bring more than a decade of national design experience to the table. JB design's has worked with more than 200 clients for different divisions such as Bungalows, Apartments, Farmhouse, Resort, Showrooms.</p>
                 
                 <blockquote className="border-l-4 border-blue-medium pl-4 italic text-gray-dark">
                   "Our passion is to design and deliver inspiring and practical spaces for all our clients, 
@@ -77,12 +67,7 @@ const About = () => {
                   Studio Address
                 </h2>
                 <div className="max-w-2xl mx-auto">
-                  <a 
-                    href={studioGoogleMapsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-start gap-3 p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer group"
-                  >
+                  <a href={studioGoogleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-start gap-3 p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer group">
                     <MapPin className="text-blue-medium mt-1 flex-shrink-0 group-hover:text-blue-dark transition-colors" size={24} />
                     <div className="text-left">
                       <p className="text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors">
@@ -107,12 +92,7 @@ const About = () => {
                   Meeting Address
                 </h2>
                 <div className="max-w-2xl mx-auto">
-                  <a 
-                    href={meetingGoogleMapsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-start gap-3 p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer group"
-                  >
+                  <a href={meetingGoogleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-start gap-3 p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer group">
                     <MapPin className="text-blue-medium mt-1 flex-shrink-0 group-hover:text-blue-dark transition-colors" size={24} />
                     <div className="text-left">
                       <p className="text-gray-700 leading-relaxed group-hover:text-gray-900 transition-colors">
@@ -133,8 +113,6 @@ const About = () => {
       </main>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
