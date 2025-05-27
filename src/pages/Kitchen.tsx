@@ -11,7 +11,7 @@ const KitchenDesign = () => {
   return (
     <>
       <Header />
-      <main className="pt-24">
+      <main className="pt-40">
         <KitchenHero />
         <KitchenPortfolio />
         <KitchenServices />
