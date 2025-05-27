@@ -119,7 +119,8 @@ const ServiceCategories = () => {
       title: "Vastu Shastra Consultation",
       description: "Comprehensive evaluation of your home's energy flow",
       image: "/lovable-uploads/71f93f7b-677d-42f9-991b-6ab9d743d41f.png",
-      type: "vastu-shastra"
+      type: "vastu-shastra",
+      detailedDescription: "Vastu Shastra is an ancient method of living harmoniously with the Nature. It is the science or study of the communion between human mind, body and soul with the environment that is the science of human existence vis-à-vis the larger cosmos. It is an art, which takes care of space, elements, energy, direction, shape, size, position, environment, utility of space etc. Ancient Indian books like MAYAMATAM, RAJA VALLABH SARNI, VISHKARMA PRAKASH, SAMARANGAN SUTRA, BHOJ SAMHITA etc. gives a deep insight of that day living and their understanding of the nature. This knowledge which has come to us from the 'Vedas', 'Sthapatya Veda', a part of the 'Atharva Veda', the sacred text of Hindus and is believed to be around 4 to 5 thousand years old. Our services like VASTU SHASTRA CONSULTANCY and GHAR VASTU help you to make your home Vastu perfect."
     },
     {
       title: "Contemporary Kitchen with Artistic Elements",
