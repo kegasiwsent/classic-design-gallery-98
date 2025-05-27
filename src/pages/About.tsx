@@ -1,3 +1,4 @@
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -20,7 +21,7 @@ const About = () => {
             
             <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
               <div className="w-full md:w-1/3 flex justify-center">
-                <Avatar className="w-64 h-64 border-4 border-blue-medium shadow-xl">
+                <Avatar className="w-64 h-64 border-4 border-blue-medium shadow-xl rounded-lg">
                   <AvatarImage src="/lovable-uploads/3dd21959-ead7-403a-8f15-b1c499c1a273.png" alt="Bhrugesh Mewada" className="object-cover" />
                   <AvatarFallback>BM</AvatarFallback>
                 </Avatar>
