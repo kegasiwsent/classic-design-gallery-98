@@ -1,4 +1,3 @@
-
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -58,13 +57,14 @@ const ongoingProjectsData: OngoingProject[] = [
     name: "Ongoing Project",
     location: "Ahmedabad, Gujarat",
     type: "Residential",
-    progress: 30,
+    progress: 10,
     startDate: "Mar 05, 2025",
     estimatedCompletion: "Jul 25, 2025",
-    image: "https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&fit=crop&w=600&q=80",
+    image: "/lovable-uploads/ff68daed-aeb7-4c2e-b265-9794d092d876.png",
     additionalImages: [
-      "https://images.unsplash.com/photo-1518659527800-a5e69fee613f?auto=format&fit=crop&w=600&q=80",
-      "https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=600&q=80"
+      "/lovable-uploads/7c0d5f67-3f90-4e37-9a4f-de18dfcc302b.png",
+      "/lovable-uploads/e0dde710-0474-499c-b7b0-f54de5d88960.png",
+      "/lovable-uploads/2807c74c-7381-4dd9-8b25-aaca0c025efb.png"
     ],
     description: "Contemporary residential project with modern design elements and quality finishes. Currently focusing on structural work and interior installations."
   },
