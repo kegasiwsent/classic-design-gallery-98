@@ -127,7 +127,7 @@ const Services = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="pt-32 pb-24">
+      <main className="pt-48 pb-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 mt-8">
             <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-blue-navy">Our Services</h1>

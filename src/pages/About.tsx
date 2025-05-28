@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -14,7 +13,7 @@ const About = () => {
     <div className="min-h-screen flex flex-col relative">
       <Header />
       
-      <main className="pt-32 pb-24">
+      <main className="pt-48 pb-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12 mt-8">
