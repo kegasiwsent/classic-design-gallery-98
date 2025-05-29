@@ -1,21 +1,26 @@
+
 import { Button } from "./ui/button";
 import HeroSlideshow from "./HeroSlideshow";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+
 const HeroSection = () => {
-  return <section className="h-screen w-full relative overflow-hidden">
+  return (
+    <section className="h-screen w-full relative overflow-hidden">
       {/* Background slideshow */}
       <HeroSlideshow />
 
-      <div className="absolute inset-0 flex flex-col justify-center items-start text-white p-8 md:p-16 lg:p-24">
-        <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold mb-6 max-w-4xl animate-fade-in bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-lightest drop-shadow-lg">The Philosophical Study Of Beauty And Art </h1>
+      <div className="absolute inset-0 flex flex-col justify-center items-start text-white p-8 md:p-16 lg:p-24 pt-32 md:pt-40 lg:pt-48">
+        <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold mb-6 max-w-4xl animate-fade-in bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-lightest drop-shadow-lg">
+          The Philosophical Study Of Beauty And Art 
+        </h1>
         <p className="text-base md:text-lg max-w-2xl mb-8 animate-fade-in text-gray-lightest/90" style={{
-        animationDelay: "0.2s"
-      }}></p>
+          animationDelay: "0.2s"
+        }}></p>
         
         <div className="flex flex-col items-start space-y-3 animate-fade-in" style={{
-        animationDelay: "0.4s"
-      }}>
+          animationDelay: "0.4s"
+        }}>
           <p className="text-base md:text-lg font-medium text-white/90 mb-1">
             One-stop shop for all things interiors
           </p>
@@ -33,6 +38,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
